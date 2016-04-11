@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Th'SAM!thesizer</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="tuna.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Londrina+Sketch' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+  <div id="wrapper">
+    <div id="details">
+
+      <p>FRQCY:
+        <span id="frequency"></span>
+      </p>
+
+    </div>
+
+   
+    <canvas id="theremin"></canvas>
+
+    <div id="controls">
+
+      <div class="wave-form">
+        <p>WAVE FORM</p>
+        <div id="wave-form-buttons">
+          
+          <a class="button clicked"  id="sine">Sine</a>
+          <a class="button"  id="triangle">Triangle</a>
+          <a class="button"  id="square">Square</a>
+          <a class="button"  id="sawtooth">Saw Tooth</a>
+
+        </div>
+      </div>
+
+       <div class="effects">
+        <p>EFFECTS</p>
+        <div id="effects-buttons">
+
+          <a class="button"  id="compressor">Compressor</a>
+          <a class="button"  id="chorus">Chorus</a>
+          <a class="button"  id="overdrive">Overdrive</a>
+          <a class="button"  id="delay">Delay</a>
+          <a class="button"  id="phaser">Phaser</a>
+          <a class="button"  id="tremolo">Tremolo</a>
+         
+        </div>
+
+    </div>
+
+   
+   
+
+
+  </div>
+  
+</body>
+
+  
+</html>
