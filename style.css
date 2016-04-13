@@ -7,12 +7,19 @@ body {
    background: -ms-linear-gradient(top, #708B75, #759AAB);
    background: -o-linear-gradient(top, #708B75, #759AAB);
    background-image: -ms-linear-gradient(top, #708B75 0%, #759AAB 100%);
+   -webkit-touch-callout:none;
+   -webkit-user-select:none;
+   -khtml-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select:none;
+   -webkit-tap-highlight-color:rgba(0,0,0,0);
 
 }
 
 #wrapper {
   margin: 0 auto;
-  padding-bottom: 10em;
+  padding-bottom: 13.5em;
 }
 
 #theremin {
@@ -36,7 +43,7 @@ body {
   width: 20%;
   height: 82em;
   position: relative;
-  left: 14%;
+  left: 12%;
   background-color: #444B6E;
 }
 
@@ -53,7 +60,7 @@ body {
   text-shadow: 12px 12px 12px #708B75;
   margin: 0;
   margin-bottom: 1vw;
-  margin-left: 15vw;
+  margin-left: 13vw;
 }
 
 #controls {
@@ -121,7 +128,7 @@ body {
   width: 20%;
   height: 82em;
   position: relative;
-  left: 36%;
+  left: 38%;
   background-color: #444B6E;
 }
 
@@ -138,7 +145,7 @@ body {
   text-shadow: 12px 12px 12px #708B75;
   margin: 0;
   margin-bottom: 1vw;
-  margin-left: 62vw;
+  margin-left: 64vw;
 }
 
 .controls-right-hand{
@@ -235,46 +242,6 @@ body {
    margin-top: 0.7em;
   }
 
-#tonematrix {
-  width: 1px;
-  height: 1px;
-}
-
-input[type=radio] {
-  width: 20px;
-  height: 20px;
-}
-
-.note {
-  position: absolute;
-  margin-top: 103vw;
-  margin-left: 2vw;
-  background: #444B6E;
-  -webkit-transition: 0.5s;
-}
-.note.active {
-  background: #3D315B;
-}
-.note.hit {
-  pointer-events:none;
-  z-index: 5;
-  -webkit-animation: hit 0.3s ease-in-out;
-}
-
-@-webkit-keyframes hit {
-  from {
-      background: rgba(250,242,161,0.5);
-      opacity: 1;
-      border-radius: 50%;
-      -webkit-transform: scale3d(1,1,1);
-  }
-  to {
-      background: rgba(250,242,161,0.5);
-      opacity: 0.0;
-      border-radius: 50%;
-      -webkit-transform: scale3d(2,2,1);
-  }
-}
  
 #swap {
   width: 50%;
