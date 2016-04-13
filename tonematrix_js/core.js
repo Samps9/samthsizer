@@ -7,7 +7,7 @@
 		BPM: 120,
 		ROWS: 11,
 		COLUMNS: 16,
-		NOTESIZE: 32,
+		NOTESIZE: 34,
 		currentScale: 'Pentatonic',
 		SCALES: {
 			Pentatonic: ['C6', 'A5', 'G5', 'E5', 'D5', 'C5', 'A4', 'G4', 'E4', 'D4', 'C4', 'A3'],
