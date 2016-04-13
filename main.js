@@ -27,7 +27,7 @@ window.onload = function() {
         event.preventDefault();
       }, false);
 
-      
+      window.addEventListener("contextmenu", function(e) { e.preventDefault(); })
 
       this.myCanvas.addEventListener("mousedown", this.playSound);
       this.myCanvas.addEventListener("touchstart", this.playSound);
@@ -575,6 +575,7 @@ window.onload = function() {
         $(".note").css("margin-left", "40vw")
       }
     })
+
 
   $("#theremin").bind("mousemove touchmove", function(){
     $("#theremin").focus();
