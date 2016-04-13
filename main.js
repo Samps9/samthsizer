@@ -580,7 +580,7 @@ window.onload = function() {
     $("#theremin").focus();
     setTimeout(function() {
       $("#theremin").blur(); 
-    }, 2000)
+    }, 1000)
   })
 
 
