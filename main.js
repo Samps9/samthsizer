@@ -8,7 +8,7 @@ window.onload = function() {
                               window.mozAudioContext ||
                               window.oAudioContext ||
                               window.msAudioContext);
-
+    
     this.myCanvas = document.getElementById("theremin"); 
     this.frequencyDisplay = document.getElementById("frequency");
 
@@ -27,6 +27,8 @@ window.onload = function() {
         event.preventDefault();
       }, false);
 
+      
+
       this.myCanvas.addEventListener("mousedown", this.playSound);
       this.myCanvas.addEventListener("touchstart", this.playSound);
 
@@ -39,6 +41,7 @@ window.onload = function() {
     this.playSound = function(event) {
       oscillator = myAudioContext.createOscillator();
       var gain = myAudioContext.createGain();
+      gain.gain.value = 0.1;
       var choose6Effects = function(effect1, effect2, effect3, effect4, effect5, effect6){
               oscillator.connect(effect1);
               effect1.connect(effect2);
@@ -100,7 +103,7 @@ window.onload = function() {
       });
 
       var overdrive = new tuna.Overdrive({
-          outputGain: 0.4,         //0 to 1+
+          outputGain: 0.2,         //0 to 1+
           drive: 0.8,              //0 to 1
           curveAmount: 1,          //0 to 1
           algorithmIndex: 2,       //0 to 5, selects one of our drive algorithms
@@ -475,7 +478,6 @@ window.onload = function() {
 
     //CLICK HANDLERS
     $("#sine").click(function(){
-      console.log("sine")
       $("a")[0].setAttribute("class", "button clicked")
       $("a")[1].setAttribute("class", "button")
       $("a")[2].setAttribute("class", "button")
@@ -483,7 +485,6 @@ window.onload = function() {
       })
 
     $("#triangle").click(function(){
-      console.log("triangle")
       $("a")[0].setAttribute("class", "button")
       $("a")[1].setAttribute("class", "button clicked")
       $("a")[2].setAttribute("class", "button")
@@ -491,7 +492,6 @@ window.onload = function() {
     })
 
     $("#square").click(function(){
-      console.log("square")
       $("a")[0].setAttribute("class", "button")
       $("a")[1].setAttribute("class", "button")
       $("a")[2].setAttribute("class", "button clicked")
@@ -499,7 +499,6 @@ window.onload = function() {
     })
 
     $("#sawtooth").click(function(){
-      console.log("sawtooth")
       $("a")[0].setAttribute("class", "button")
       $("a")[1].setAttribute("class", "button")
       $("a")[2].setAttribute("class", "button")
@@ -507,7 +506,6 @@ window.onload = function() {
     })
 
     $("#compressor").click(function(){
-      console.log("compressor")
       if( mySamthsizer.getAttributeForAnchor(4) ){
         $("a")[4].setAttribute("class", "button")
       } else {
@@ -516,7 +514,6 @@ window.onload = function() {
     })
     
     $("#chorus").click(function() {
-      console.log("chorus")
       if( mySamthsizer.getAttributeForAnchor(5) ){
         $("a")[5].setAttribute("class", "button")
       } else {
@@ -525,7 +522,6 @@ window.onload = function() {
     })
 
     $("#overdrive").click(function(){
-      console.log("overdrive")
       if( mySamthsizer.getAttributeForAnchor(6) ){
         $("a")[6].setAttribute("class", "button")
       } else {
@@ -534,7 +530,6 @@ window.onload = function() {
     })
 
     $("#delay").click(function(){
-      console.log("delay")
       if( mySamthsizer.getAttributeForAnchor(7) ){
         $("a")[7].setAttribute("class", "button")
       } else {
@@ -543,7 +538,6 @@ window.onload = function() {
     })
 
     $("#phaser").click(function(){
-      console.log("phaser")
       if( mySamthsizer.getAttributeForAnchor(8) ){
         $("a")[8].setAttribute("class", "button")
       } else {
@@ -552,11 +546,42 @@ window.onload = function() {
     })
 
     $("#tremolo").click(function(){
-      console.log("tremolo")
       if( mySamthsizer.getAttributeForAnchor(9) ){
         $("a")[9].setAttribute("class", "button")
       } else {
       $("a")[9].setAttribute("class", "button clicked")
       }
     })
+
+    $("#swap").click(function(){
+      if( $("a")[10].getAttribute("class") == "button left" ){
+        $("a")[10].setAttribute("class", "button right")
+        $("#theremin")[0].setAttribute("class", "theremin-right-hand")
+        $("#details")[0].setAttribute("class", "details-right-hand")
+        $("#controls")[0].setAttribute("class", "controls-right-hand")
+        $("#wave-form-buttons")[0].setAttribute("class", "wave-form-buttons-right-hand")
+        $("#effects-buttons")[0].setAttribute("class", "effects-buttons-right-hand")
+        $("#frqcy")[0].setAttribute("class", "frqcy-right-hand")
+        $(".note").css("margin-left", "3vw")
+
+      } else {
+        $("a")[10].setAttribute("class", "button left")
+        $("#theremin")[0].setAttribute("class", "theremin-left-hand")
+        $("#details")[0].setAttribute("class", "details-left-hand")
+        $("#controls")[0].setAttribute("class", "controls-left-hand")
+        $("#wave-form-buttons")[0].setAttribute("class", "wave-form-buttons-left-hand")
+        $("#effects-buttons")[0].setAttribute("class", "effects-buttons-left-hand")
+        $("#frqcy")[0].setAttribute("class", "frqcy-left-hand")
+        $(".note").css("margin-left", "44vw")
+      }
+    })
+
+  $("#theremin").bind("mousemove touchmove", function(){
+    $("#theremin").focus();
+    setTimeout(function() {
+      $("#theremin").blur(); 
+    }, 2000)
+  })
+
+
 }

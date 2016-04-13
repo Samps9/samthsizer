@@ -3,32 +3,35 @@
 <head>
   <meta charset="UTF-8">
 
-  <title>Th'SAM!thesizer</title>
+  <title>Samthsizer - Theremin style web synth</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script type="text/javascript" src="tuna.js"></script>
-  <script type="text/javascript" src="main.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Londrina+Sketch' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Londrina+Sketch|Jockey+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
   <div id="wrapper">
-    <div id="details">
 
-      <p>FRQCY:
+    <div id="dropdown">
+      
+    </div>
+
+    <div id="details" class="details-right-hand">
+
+      <p id="frqcy" class="frqcy-right-hand">FRQCY:
         <span id="frequency"></span>
       </p>
 
     </div>
 
    
-    <canvas id="theremin"></canvas>
+    <canvas id="theremin" class="theremin-right-hand" tabindex="1"></canvas>
 
-    <div id="controls">
+    <div id="controls" class="controls-right-hand">
 
       <div class="wave-form">
         <p>WAVE FORM</p>
-        <div id="wave-form-buttons">
+        <div id="wave-form-buttons" class="wave-form-buttons-right-hand">
           
           <a class="button clicked"  id="sine">Sine</a>
           <a class="button"  id="triangle">Triangle</a>
@@ -40,26 +43,31 @@
 
        <div class="effects">
         <p>EFFECTS</p>
-        <div id="effects-buttons">
-
+        <div id="effects-buttons" class="effects-buttons-right-hand">
           <a class="button"  id="compressor">Compressor</a>
           <a class="button"  id="chorus">Chorus</a>
           <a class="button"  id="overdrive">Overdrive</a>
           <a class="button"  id="delay">Delay</a>
           <a class="button"  id="phaser">Phaser</a>
           <a class="button"  id="tremolo">Tremolo</a>
-         
         </div>
-
+      </div>
     </div>
 
-   
-   
-
+  
+      <div id="tonematrix"></div>
+    
+    
+    <a class="button right"  id="swap">&#8596</a>
 
   </div>
   
 </body>
-
-  
+    <script src="tonematrix_js/tonematrix.js"></script>
+    <script src="tonematrix_js/core.js"></script>
+    <script src="tonematrix_js/synth.js"></script>
+    <script src="tonematrix_js/voice.js"></script>
+    <script src="tonematrix_js/app.js"></script>
+    <script type="text/javascript" src="tuna.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </html>
