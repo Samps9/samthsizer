@@ -247,8 +247,8 @@ input[type=radio] {
 
 .note {
   position: absolute;
-  margin-top: 105vw;
-  margin-left: 3vw;
+  margin-top: 103vw;
+  margin-left: 2vw;
   background: #444B6E;
   -webkit-transition: 0.5s;
 }
