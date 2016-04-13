@@ -27,7 +27,11 @@ window.onload = function() {
         event.preventDefault();
       }, false);
 
-      
+      document.body.addEventListener("touchstart", function(event) {
+        event.preventDefault();
+      }, false);
+
+     
 
       this.myCanvas.addEventListener("mousedown", this.playSound);
       this.myCanvas.addEventListener("touchstart", this.playSound);
@@ -575,6 +579,7 @@ window.onload = function() {
         $(".note").css("margin-left", "40vw")
       }
     })
+
 
   $("#theremin").bind("mousemove touchmove", function(){
     $("#theremin").focus();

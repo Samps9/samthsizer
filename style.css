@@ -23,6 +23,13 @@ body {
 }
 
 #theremin {
+  -webkit-touch-callout:none;
+   -webkit-user-select:none;
+   -khtml-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select:none;
+   -webkit-tap-highlight-color:rgba(0,0,0,0);
   transition: 1s;
 }
 
@@ -45,6 +52,7 @@ body {
   position: relative;
   left: 12%;
   background-color: #444B6E;
+
 }
 
 .details-left-hand {
@@ -61,16 +69,6 @@ body {
   margin: 0;
   margin-bottom: 1vw;
   margin-left: 13vw;
-}
-
-#controls {
-  transition: 1.5s;
-}
-
-#controls:focus {
-  -webkit-box-shadow: rgba(255,255,255,0.6) 0 0 9em, inset rgba(255,255,255,0.6) 0 0 9em;
-  -moz-box-shadow: rgba(255,255,255,0.6) 0 0 9em, inset rgba(255,255,255,0.6) 0 0 9em;
-  box-shadow: rgba(255,255,255,0.6) 0 0 9em, inset rgba(255,255,255,0.6) 0 0 9em;
 }
 
 .controls-left-hand{
@@ -186,6 +184,23 @@ body {
   -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
   -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
   box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+}
+
+.kill-switch-button-right-hand {
+  float: left;
+  border: 0.5em solid #3D315B;
+  border-radius: 1em;
+  background-color: #444B6E;
+  margin-left: 3.5em;
+  margin-bottom: 1em;
+  -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+  -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+  box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+}
+
+#kill-switch-desc  {
+  font-size: 10px;
+  font-family: verdana;
 }
 
 .button {
