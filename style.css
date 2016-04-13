@@ -16,7 +16,7 @@ body {
 }
 
 #theremin {
-  transition: 1.5s;
+  transition: 1s;
 }
 
 #theremin:focus{
@@ -34,7 +34,7 @@ body {
   -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
   box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
   width: 20%;
-  height: 87em;
+  height: 85em;
   position: relative;
   left: 14%;
   background-color: #444B6E;
@@ -42,7 +42,7 @@ body {
 
 .details-left-hand {
   margin: 0 auto;
-  padding-top: 1vw;
+  
 }
 
 .frqcy-left-hand {
@@ -51,6 +51,7 @@ body {
   font-weight: bold;
   color: #FAF2A1;
   text-shadow: 12px 12px 12px #708B75;
+  margin: 0;
   margin-bottom: 1vw;
   margin-left: 15vw;
 }
@@ -118,7 +119,7 @@ body {
   -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
   box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
   width: 20%;
-  height: 87em;
+  height: 85em;
   position: relative;
   left: 36%;
   background-color: #444B6E;
@@ -126,7 +127,7 @@ body {
 
 .details-right-hand {
   margin: 0 auto;
-  padding-top: 1vw;
+  
 }
 
 .frqcy-right-hand {
@@ -135,6 +136,7 @@ body {
   font-weight: bold;
   color: #FAF2A1;
   text-shadow: 12px 12px 12px #708B75;
+  margin: 0;
   margin-bottom: 1vw;
   margin-left: 62vw;
 }
@@ -245,7 +247,7 @@ input[type=radio] {
 
 .note {
   position: absolute;
-  margin-top: 120vw;
+  margin-top: 112vw;
   margin-left: 3vw;
   background: #444B6E;
   -webkit-transition: 0.5s;
