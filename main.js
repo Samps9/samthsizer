@@ -27,11 +27,9 @@ window.onload = function() {
         event.preventDefault();
       }, false);
 
-      document.body.addEventListener("touchstart", function(event) {
+      this.myCanvas.addEventListener("touchstart", function(event) {
         event.preventDefault();
       }, false);
-
-     
 
       this.myCanvas.addEventListener("mousedown", this.playSound);
       this.myCanvas.addEventListener("touchstart", this.playSound);
