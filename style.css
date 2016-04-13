@@ -34,7 +34,7 @@ body {
   -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
   box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
   width: 20%;
-  height: 85em;
+  height: 82em;
   position: relative;
   left: 14%;
   background-color: #444B6E;
@@ -119,7 +119,7 @@ body {
   -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
   box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
   width: 20%;
-  height: 85em;
+  height: 82em;
   position: relative;
   left: 36%;
   background-color: #444B6E;
@@ -247,7 +247,7 @@ input[type=radio] {
 
 .note {
   position: absolute;
-  margin-top: 112vw;
+  margin-top: 105vw;
   margin-left: 3vw;
   background: #444B6E;
   -webkit-transition: 0.5s;
@@ -272,7 +272,7 @@ input[type=radio] {
       background: rgba(250,242,161,0.5);
       opacity: 0.0;
       border-radius: 50%;
-      -webkit-transform: scale3d(3,3,1);
+      -webkit-transform: scale3d(2,2,1);
   }
 }
  
