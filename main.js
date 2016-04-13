@@ -572,7 +572,7 @@ window.onload = function() {
         $("#wave-form-buttons")[0].setAttribute("class", "wave-form-buttons-left-hand")
         $("#effects-buttons")[0].setAttribute("class", "effects-buttons-left-hand")
         $("#frqcy")[0].setAttribute("class", "frqcy-left-hand")
-        $(".note").css("margin-left", "44vw")
+        $(".note").css("margin-left", "40vw")
       }
     })
 

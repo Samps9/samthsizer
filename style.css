@@ -36,7 +36,7 @@ body {
   width: 20%;
   height: 82em;
   position: relative;
-  left: 14%;
+  left: 12%;
   background-color: #444B6E;
 }
 
@@ -53,7 +53,7 @@ body {
   text-shadow: 12px 12px 12px #708B75;
   margin: 0;
   margin-bottom: 1vw;
-  margin-left: 15vw;
+  margin-left: 13vw;
 }
 
 #controls {
@@ -121,7 +121,7 @@ body {
   width: 20%;
   height: 82em;
   position: relative;
-  left: 36%;
+  left: 38%;
   background-color: #444B6E;
 }
 
@@ -138,7 +138,7 @@ body {
   text-shadow: 12px 12px 12px #708B75;
   margin: 0;
   margin-bottom: 1vw;
-  margin-left: 62vw;
+  margin-left: 64vw;
 }
 
 .controls-right-hand{
