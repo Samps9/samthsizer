@@ -27,7 +27,11 @@ window.onload = function() {
         event.preventDefault();
       }, false);
 
-      window.addEventListener("contextmenu", function(e) { e.preventDefault(); })
+      document.body.addEventListener("touchstart", function(event) {
+        event.preventDefault();
+      }, false);
+
+     
 
       this.myCanvas.addEventListener("mousedown", this.playSound);
       this.myCanvas.addEventListener("touchstart", this.playSound);
