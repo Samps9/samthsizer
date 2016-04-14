@@ -32,7 +32,7 @@ window.onload = function() {
       }, false);
       //stops oscillator
       this.myCanvas.addEventListener("touchstart", function(event) {
-        if(event.touches.length > 1){
+        if(event.targetTouches.length > 1){
           self.stopSound
         }
       }, false);
