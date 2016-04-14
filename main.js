@@ -30,10 +30,19 @@ window.onload = function() {
       this.myCanvas.addEventListener("touchstart", function(event) {
         event.preventDefault();
       }, false);
-      //stops oscillator
-      this.myCanvas.addEventListener("touchstart", function(event) {
-        if(event.targetTouches.length > 1){
-          self.stopSound
+
+      this.myCanvas.addEventListener('touchstart', function(event) {
+        for (var i = 0; i < event.targetTouches; i++) {
+          var touch = event.targetTouches[i];
+          console.log('touched ' + touch.identifier);
+        }
+      }, false);
+
+
+      this.myCanvas.addEventListener('touchmove', function(event) {
+        for (var i = 0; i < event.targetTouches; i++) {
+          var touch = event.targetTouches[i];
+          console.log('touched ' + touch.identifier);
         }
       }, false);
 
