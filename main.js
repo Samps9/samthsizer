@@ -37,7 +37,6 @@ window.onload = function() {
       this.myCanvas.addEventListener("mouseup", this.stopSound);
       this.myCanvas.addEventListener("touchend", this.stopSound);
       this.myCanvas.addEventListener("mouseleave", this.stopSound);
-
     };
 
     this.playSound = function(event) {
@@ -467,7 +466,11 @@ window.onload = function() {
         self.showFrequency(event.y);
       } else if (event.type == "touchstart" || event.type == "touchmove") {
         var touch = event.touches[0];
+        if(event.touches.length > 1){
+          self.stopSound;
+        } else {
         self.showFrequency(touch.pageY);
+        }
       }
     };
 
