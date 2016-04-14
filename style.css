@@ -122,7 +122,7 @@ body {
   width: 20%;
   height: 82em;
   position: relative;
-  left: 38%;
+  left: 30%;
   background-color: #444B6E;
 }
 
@@ -144,6 +144,7 @@ body {
 
 .controls-right-hand{
   float: left;
+  margin-top: 5vw;
 
 }
 
@@ -202,7 +203,7 @@ body {
    box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
    text-shadow: #7ea4bd 0 1px 0;
    color: #06426c;
-   font-size: 26px;
+   font-size: 40px;
    font-family:'Jockey One', sans-serif;
    text-decoration: none;
    vertical-align: middle;
