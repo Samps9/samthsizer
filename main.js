@@ -29,14 +29,22 @@ window.onload = function() {
       //disables selection of canvas
       this.myCanvas.addEventListener("touchstart", function(event) {
         event.preventDefault();
+        self.playSound(event);
+      }, false);
+
+      this.myCanvas.addEventListener("touchend", function(event){ 
+        event.preventDefault();
+        self.stopSound(event);
+      }, false);
+
+      this.myCanvas.addEventListener("touchcancel", function(event){
+        event.preventDefault();
+        self.stopSound(event);
       }, false);
 
       this.myCanvas.addEventListener("mousedown", this.playSound);
-      this.myCanvas.addEventListener("touchstart", this.playSound);
-
+     
       this.myCanvas.addEventListener("mouseup", this.stopSound);
-      this.myCanvas.addEventListener("touchend", this.stopSound);
-      this.myCanvas.addEventListener("touchcancel", this.stopSound)
       this.myCanvas.addEventListener("mouseleave", this.stopSound);
     };
 
@@ -438,19 +446,28 @@ window.onload = function() {
       self.changeFrequency(event);
 
       self.myCanvas.addEventListener("mousemove", self.changeFrequency);
-      self.myCanvas.addEventListener("touchmove", self.changeFrequency);
+      self.myCanvas.addEventListener("touchmove", function(event){
+        event.preventDefault();
+        self.changeFrequency(event);
+      }, false);
       self.myCanvas.addEventListener("mouseleave", self.stopSound);
-      self.myCanvas.addEventListener("touchcancel", self.stopSound)
-    };
+      self.myCanvas.addEventListener("touchcancel", function(event){
+        event.preventDefault();
+        self.stopSound(event)
+      }, false);
+    }
 
     this.stopSound = function(event) {
      
-    oscillator.stop(0);
+      oscillator.stop(0);
 
-    self.myCanvas.removeEventListener("mousemove", self.changeFrequency);
-    self.myCanvas.removeEventListener("touchmove", self.changeFrequency);
-    self.myCanvas.removeEventListener("mouseleave", self.stopSound);
-     };
+      self.myCanvas.removeEventListener("mousemove", self.changeFrequency);
+      self.myCanvas.removeEventListener("touchmove", function(event){
+        event.preventDefault();
+        self.changeFrequency(event);
+      }, false);
+      self.myCanvas.removeEventListener("mouseleave", self.stopSound);
+    };
 
     this.getNote = function(position) {
       var noteDifference = self.lowNote - self.highNote;
