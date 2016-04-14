@@ -40,6 +40,10 @@ body {
   box-shadow: rgba(255,255,255,0.6) 0 0 9em, inset rgba(255,255,255,0.6) 0 0 9em;
 }
 
+#controls {
+  transition: 1s;
+}
+
 /*left hand*/
 .theremin-left-hand {
   border: 1em solid #3D315B;
@@ -72,11 +76,9 @@ body {
 }
 
 .controls-left-hand{
-  float: right;
-}
-
-.controls-right-hand{
-  float: left;
+  position: absolute;
+  bottom: 40%;
+  left: 73%;
 }
 
 .controls-left-hand p {
@@ -126,7 +128,7 @@ body {
   width: 20%;
   height: 82em;
   position: relative;
-  left: 38%;
+  left: 63.5%;
   background-color: #444B6E;
 }
 
@@ -147,7 +149,9 @@ body {
 }
 
 .controls-right-hand{
-  float: left;
+  position: absolute;
+  bottom: 40%;
+
 }
 
 .controls-right-hand p {
@@ -186,22 +190,6 @@ body {
   box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
 }
 
-.kill-switch-button-right-hand {
-  float: left;
-  border: 0.5em solid #3D315B;
-  border-radius: 1em;
-  background-color: #444B6E;
-  margin-left: 3.5em;
-  margin-bottom: 1em;
-  -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-  -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-  box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-}
-
-#kill-switch-desc  {
-  font-size: 10px;
-  font-family: verdana;
-}
 
 .button {
    border: 2px solid #0a3c59;
