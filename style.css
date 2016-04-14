@@ -40,10 +40,6 @@ body {
   box-shadow: rgba(255,255,255,0.6) 0 0 9em, inset rgba(255,255,255,0.6) 0 0 9em;
 }
 
-#controls {
-  transition: 1s;
-}
-
 /*left hand*/
 .theremin-left-hand {
   border: 1em solid #3D315B;
@@ -72,13 +68,11 @@ body {
   text-shadow: 12px 12px 12px #708B75;
   margin: 0;
   margin-bottom: 1vw;
-  margin-left: 13vw;
+  margin-left: 12.5vw;
 }
 
 .controls-left-hand{
-  position: absolute;
-  bottom: 40%;
-  left: 73%;
+  float: right;
 }
 
 .controls-left-hand p {
@@ -128,7 +122,7 @@ body {
   width: 20%;
   height: 82em;
   position: relative;
-  left: 63.5%;
+  left: 38%;
   background-color: #444B6E;
 }
 
@@ -149,8 +143,7 @@ body {
 }
 
 .controls-right-hand{
-  position: absolute;
-  bottom: 40%;
+  float: left;
 
 }
 
