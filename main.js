@@ -26,10 +26,16 @@ window.onload = function() {
       document.body.addEventListener("touchmove", function(event) {
         event.preventDefault();
       }, false);
-
+      //disables selection of canvas
       this.myCanvas.addEventListener("touchstart", function(event) {
         event.preventDefault();
       }, false);
+      //stops oscillator
+      this.myCanvas.addEventListener("touchstart", function(event) {
+        if(event.touches.length > 1){
+          self.stopSound
+        }
+      });
 
       this.myCanvas.addEventListener("mousedown", this.playSound);
       this.myCanvas.addEventListener("touchstart", this.playSound);
@@ -466,11 +472,7 @@ window.onload = function() {
         self.showFrequency(event.y);
       } else if (event.type == "touchstart" || event.type == "touchmove") {
         var touch = event.touches[0];
-        if(event.touches.length > 1){
-          self.stopSound;
-        } else {
         self.showFrequency(touch.pageY);
-        }
       }
     };
 
