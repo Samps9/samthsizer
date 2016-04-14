@@ -35,7 +35,7 @@ window.onload = function() {
         if(event.touches.length > 1){
           self.stopSound
         }
-      });
+      }, false);
 
       this.myCanvas.addEventListener("mousedown", this.playSound);
       this.myCanvas.addEventListener("touchstart", this.playSound);
