@@ -440,6 +440,7 @@ window.onload = function() {
       self.myCanvas.addEventListener("mousemove", self.changeFrequency);
       self.myCanvas.addEventListener("touchmove", self.changeFrequency);
       self.myCanvas.addEventListener("mouseleave", self.stopSound);
+      self.myCanvas.addEventListener("touchcancel", self.stopSound)
     };
 
     this.stopSound = function(event) {
