@@ -36,11 +36,12 @@ window.onload = function() {
 
       this.myCanvas.addEventListener("mouseup", this.stopSound);
       this.myCanvas.addEventListener("touchend", this.stopSound);
+      this.myCanvas.addEventListener("touchcancel", this.stopSound)
       this.myCanvas.addEventListener("mouseleave", this.stopSound);
     };
 
     this.playSound = function(event) {
-      event.preventDefault();
+
       oscillator = myAudioContext.createOscillator();
       var gain = myAudioContext.createGain();
       gain.gain.value = 0.1;
