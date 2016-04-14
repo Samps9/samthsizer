@@ -31,21 +31,6 @@ window.onload = function() {
         event.preventDefault();
       }, false);
 
-      this.myCanvas.addEventListener('touchstart', function(event) {
-        for (var i = 0; i < event.targetTouches; i++) {
-          var touch = event.targetTouches[i];
-          console.log('touched ' + touch.identifier);
-        }
-      }, false);
-
-
-      this.myCanvas.addEventListener('touchmove', function(event) {
-        for (var i = 0; i < event.targetTouches; i++) {
-          var touch = event.targetTouches[i];
-          console.log('touched ' + touch.identifier);
-        }
-      }, false);
-
       this.myCanvas.addEventListener("mousedown", this.playSound);
       this.myCanvas.addEventListener("touchstart", this.playSound);
 
@@ -55,6 +40,7 @@ window.onload = function() {
     };
 
     this.playSound = function(event) {
+      event.preventDefault();
       oscillator = myAudioContext.createOscillator();
       var gain = myAudioContext.createGain();
       gain.gain.value = 0.1;
