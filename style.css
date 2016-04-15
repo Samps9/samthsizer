@@ -19,7 +19,7 @@ body {
 
 #wrapper {
   margin: 0 auto;
-  padding-bottom: 34%;
+  padding-bottom: 55%;
 }
 
 #theremin {
@@ -252,7 +252,7 @@ body {
   font-size: 32px;
 }
 
-@media all and (min-width: 1200px){
+@media screen and (min-width: 1275px){
   body {
     margin: 0;
     padding: 0;
@@ -269,6 +269,7 @@ body {
     -ms-user-select:none;
     user-select:none;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
+    width: 1220;
 
 }
 
@@ -342,7 +343,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    margin-left: 1.25em;
+    margin-left: 2.5em;
   }
 
   .wave-form-buttons-right-hand {
@@ -426,7 +427,6 @@ body {
 
    
   #swap {
-    
     display: none;
   }
 }
