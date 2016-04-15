@@ -1144,7 +1144,7 @@ window.onload = function() {
         $("#theremin").focus();
     })
 
-    $("#theremin").bind("mouseup", function(){
+    $("#theremin").bind("mouseup mouseleave", function(){
       $("#theremin").blur(); 
     })
 
