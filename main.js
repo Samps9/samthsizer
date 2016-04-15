@@ -1,9 +1,11 @@
 window.onload = function() {
   console.log(window.innerWidth)
-  if(window.innerWidth < 1200){
+  if( window.innerWidth < 1275 ){
+
     function Samthsizer() {
       var self = this
       var oscillator;
+      //prefixing for browser compatibility
       var myAudioContext = new (window.AudioContext ||
                                 window.webkitAudioContext ||
                                 window.mozAudioContext ||
@@ -1036,7 +1038,7 @@ window.onload = function() {
       this.getNote = function(position) {
         var noteDifference = self.lowNote - self.highNote;
         var noteOffset = (this.myCanvas.offsetWidth / noteDifference ) * (position - this.myCanvas.offsetTop)
-        return (this.lowNote + noteOffset) * 3;
+        return (this.lowNote + noteOffset) * 2;
       };
 
       this.showFrequency = function(position) {
