@@ -609,7 +609,7 @@ window.onload = function() {
       this.frequencyDisplay = document.getElementById("frequency");
 
       this.lowNote = 561.63; 
-      this.highNote = 1493.88; 
+      this.highNote = 593.88; 
 
       // this function helps wave form and effect selection DRYer
      this.getAttributeForAnchor = function(index){
@@ -1037,7 +1037,7 @@ window.onload = function() {
 
       this.getNote = function(position) {
         var noteDifference = self.lowNote - self.highNote;
-        var noteOffset = (this.myCanvas.offsetWidth / noteDifference ) * (position - this.myCanvas.offsetTop)
+        var noteOffset = (this.myCanvas.offsetWidth / noteDifference ) - (position - this.myCanvas.offsetWidth)
         return (this.lowNote + noteOffset) * 2;
       };
 
