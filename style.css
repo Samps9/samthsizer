@@ -307,7 +307,7 @@ body {
     width: 10%;
     height: 35em;
     position: relative;
-    left: 30%;
+    left: 15%;
     background-color: #444B6E;
   }
 
@@ -324,7 +324,7 @@ body {
     text-shadow: 12px 12px 12px #708B75;
     margin: 0;
     margin-bottom: 1vw;
-    margin-left: 45vw;
+    margin-left: 44.5vw;
     margin-top: 1vw;
   }
 
@@ -423,6 +423,47 @@ body {
      background-image: -ms-linear-gradient(top, #FAF2A1 0%, #759AAB 100%);
      color: #fff;
      margin-top: 0.7em;
+  }
+
+  #tonematrix {
+    width: 1px;
+    height: 1px;
+  }
+
+  input[type=radio] {
+    width: 20px;
+    height: 20px;
+  }
+
+  .note {
+    position: absolute;
+    margin-top: 5vw;
+    margin-left: 50vw;
+    background: #444B6E;
+    -webkit-transition: 0.5s;
+  }
+  .note.active {
+    background: #3D315B;
+  }
+  .note.hit {
+    pointer-events:none;
+    z-index: 5;
+    -webkit-animation: hit 0.3s ease-in-out;
+  }
+
+  @-webkit-keyframes hit {
+    from {
+        background: rgba(250,242,161,0.5);
+        opacity: 1;
+        border-radius: 50%;
+        -webkit-transform: scale3d(1,1,1);
+    }
+    to {
+        background: rgba(250,242,161,0.5);
+        opacity: 0.0;
+        border-radius: 50%;
+        -webkit-transform: scale3d(2,2,1);
+    }
   }
 
    
