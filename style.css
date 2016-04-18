@@ -35,9 +35,9 @@ body {
 
 #theremin:focus{
   
-  -webkit-box-shadow: rgba(255,255,255,0.6) 0 0 9em, inset rgba(255,255,255,0.6) 0 0 9em;
-  -moz-box-shadow: rgba(255,255,255,0.6) 0 0 9em, inset rgba(255,255,255,0.6) 0 0 9em;
-  box-shadow: rgba(255,255,255,0.6) 0 0 9em, inset rgba(255,255,255,0.6) 0 0 9em;
+   -webkit-box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 5em;
+    -moz-box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 5em;
+    box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 5em;
 }
 
 /*left hand*/
@@ -252,6 +252,10 @@ body {
   font-size: 32px;
 }
 
+#tonematrix-mute {
+  display: none;
+}
+
 @media screen and (min-width: 1275px){
   body {
     margin: 0;
@@ -275,7 +279,7 @@ body {
 
   #wrapper {
     margin: 0 auto;
-    padding-bottom: 5vw;
+    padding-bottom: 2vw;
   }
 
   #theremin {
@@ -291,9 +295,9 @@ body {
 
   #theremin:focus{
     
-    -webkit-box-shadow: rgba(255,255,255,0.6) 0 0 5em, inset rgba(255,255,255,0.6) 0 0 5em;
-    -moz-box-shadow: rgba(255,255,255,0.6) 0 0 5em, inset rgba(255,255,255,0.6) 0 0 5em;
-    box-shadow: rgba(255,255,255,0.6) 0 0 5em, inset rgba(255,255,255,0.6) 0 0 5em;
+    -webkit-box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 5em;
+    -moz-box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 5em;
+    box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 5em;
   }
 
   /*right-hand*/
@@ -301,9 +305,9 @@ body {
   .theremin-right-hand {
     border: 1em solid #3D315B;
     border-radius: 1em;
-    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.3) 0 0 1em;
+    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.3) 0 0 1em;
+    box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.3) 0 0 1em;
     width: 10%;
     height: 35em;
     position: relative;
@@ -324,13 +328,13 @@ body {
     text-shadow: 12px 12px 12px #708B75;
     margin: 0;
     margin-bottom: 1vw;
-    margin-left: 44.5vw;
+    margin-left: 29.5vw;
     margin-top: 1vw;
   }
 
   .controls-right-hand{
     float: left;
-    margin-top: 2vw;
+    margin-top: -1vw;
 
   }
 
@@ -437,7 +441,7 @@ body {
 
   .note {
     position: absolute;
-    margin-top: 5vw;
+    margin-top: 2vw;
     margin-left: 50vw;
     background: #444B6E;
     -webkit-transition: 0.5s;
@@ -465,7 +469,13 @@ body {
         -webkit-transform: scale3d(2,2,1);
     }
   }
-
+  
+  #tonematrix-mute {
+    position: absolute;
+    display: inline-block;
+    right: 1vw;
+    bottom: 46vw;
+  }
    
   #swap {
     display: none;

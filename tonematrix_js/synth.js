@@ -25,10 +25,10 @@
 
     context: new AudioContext(),
 
-    attack: 100,
+    attack: 90,
     decay: 90,
     sustain: 10,
-    release: 25,
+    release: 20,
 
     voices: {},
 
@@ -39,7 +39,7 @@
       tm.extend(this, opts);
 
       Synth.master = this.context.createGain();
-      Synth.master.gain.value = 0.8;
+      Synth.master.gain.value = 0.7;
 
       this.delay = this.context.createDelay();
       this.delay.delayTime.value = 0.0;
