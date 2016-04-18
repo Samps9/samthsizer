@@ -259,7 +259,6 @@ body {
 @media screen and (min-width: 1275px){
   body {
     margin: 0;
-    bottom: -10vw;
     padding: 0;
     background: -webkit-gradient(linear, left top, left bottom, from(#759AAB), to(#708B75));
     background: -webkit-linear-gradient(top, #708B75, #759AAB);
@@ -280,7 +279,7 @@ body {
 
   #wrapper {
     margin: 0 auto;
-    padding-bottom: 5vw;
+    padding-bottom: 6.6vw;
   }
 
   #theremin {
@@ -329,7 +328,7 @@ body {
     text-shadow: 12px 12px 12px #708B75;
     margin: 0;
     margin-bottom: 1vw;
-    margin-left: 29.5vw;
+    margin-left: 28vw;
     margin-top: 1vw;
   }
 
@@ -442,7 +441,7 @@ body {
 
   .note {
     position: absolute;
-    margin-top: 2vw;
+    margin-top: 3vw;
     margin-left: 50vw;
     background: #444B6E;
     -webkit-transition: 0.5s;
@@ -474,8 +473,9 @@ body {
   #tonematrix-mute {
     position: absolute;
     display: inline-block;
-    right: 1vw;
-    bottom: 46vw;
+    right: 6vw;
+    bottom: 46.5vw;
+    font-size: 10px;
   }
    
   #swap {
