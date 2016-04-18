@@ -473,7 +473,7 @@ body {
   #tonematrix-mute {
     position: absolute;
     display: inline-block;
-    right: 4vw;
+    right: 2vw;
     bottom: 46.5vw;
     font-size: 10px;
   }
