@@ -690,8 +690,8 @@ window.onload = function() {
         });
 
         var overdrive = new tuna.Overdrive({
-            outputGain: 0.0,         //0 to 1+
-            drive: 0.5,              //0 to 1
+            outputGain: 0.2,         //0 to 1+
+            drive: 0.8,              //0 to 1
             curveAmount: 1,          //0 to 1
             algorithmIndex: 2,       //0 to 5, selects one of our drive algorithms
             bypass: 0
@@ -1138,19 +1138,6 @@ window.onload = function() {
       } else {
       $("a")[9].setAttribute("class", "button clicked")
       }
-    })
-
-    $("#tonematrix-mute").click(function(){
-      if( mySamthsizerDT.getAttributeForAnchor(11) ){
-        $("a")[11].setAttribute("class", "button")
-        $("#tonematrix-mute").html("&#128266;")
-        tm.Synth.master.gain.value = 0.7;
-      } else {
-        $("a")[11].setAttribute("class", "button clicked")
-        $("#tonematrix-mute").html("&#128263;")
-        tm.Synth.master.gain.value = 0.0;
-      }
-      
     })
 
     $("#theremin").bind("mousedown", function(){
