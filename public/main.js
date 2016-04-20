@@ -1161,6 +1161,14 @@ window.onload = function() {
       $("#theremin").blur(); 
     })
 
+    $("#help").click(function(){
+      $("#modal-outer").show();
+    })
+
+    $("#modal-outer").click(function(){
+      $("#modal-outer").hide();
+    })
+
   }
 
 }

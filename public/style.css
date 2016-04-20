@@ -524,8 +524,84 @@ body {
     color: #FAF2A1;
     text-shadow: 2px 2px 2px #3D315B;
     float: left;
-    padding-left: 3vw;
+    padding-left: 1vw;
     margin: 0;
+  }
+  
+  #help {
+    position: absolute;
+    left: 93.75%;
+    bottom: 78%;
+    width: 0.95%;
+    border: 0.45em solid #3D315B;
+    border-radius: 1em;
+  }
+
+  #modal-outer {
+    position: absolute;
+    top: 3vw;
+    bottom: 1vw;
+    display: none;
+    height: 100%;
+    width: 100%;
+  }
+  
+  #modal-inner {
+    position: relative;
+    left: 10vw;
+    width: 80%;
+    height: 75%;
+    background-color: black;
+    opacity: 0.9;
+  }
+
+  #modal-text {
+    background: -webkit-gradient(linear, left top, left bottom, from(#708B75), to(#759AAB));
+    background: -webkit-linear-gradient(top, #759AAB, #708B75);
+    background: -moz-linear-gradient(top, #759AAB, #708B75);  
+    background: -ms-linear-gradient(top, #759AAB, #708B75);
+    background: -o-linear-gradient(top, #759AAB #708B75);
+    background-image: -ms-linear-gradient(top, #759AAB 0%, #708B75 100%); 
+    margin:0 auto;
+    position: relative;
+    top: 2vw;
+    height: 90%;
+    width: 90%;
+  }
+
+  #modal-text h1 {
+    font-family: 'Iceland', cursive;
+    font-weight: bold; 
+    font-size: 40px;
+    color: #FAF2A1;
+    text-shadow: 2px 2px 2px #3D315B ;
+    margin: 0 0 0 2vw;
+    padding-top: 2vw;
+  }
+
+  .modal-info {
+    width: 30%;
+    margin: 1vw;
+    float: left;
+  }
+
+  .modal-info h3 {
+    font-family: 'Iceland', cursive;
+    font-weight: bold; 
+    color: #FAF2A1;
+    text-shadow: 2px 2px 2px #3D315B ;
+  }
+
+  .modal-info li {
+    font-family:'Jockey One', sans-serif;
+    list-style: square;
+    color: #06426c;
+    margin-bottom: 1vw;
+    text-shadow: 2px 2px 2px grey;
+  }
+
+  #havefun {
+    float: left;
   }
 
   #swap {
