@@ -279,7 +279,7 @@ body {
 
   #wrapper {
     margin: 0 auto;
-    padding-bottom: 6.6vw;
+    padding-bottom: 2vw;
   }
 
   #theremin {
@@ -320,12 +320,12 @@ body {
     
   }
 
-  .frqcy-right-hand {
+  #frqcy {
     font-family: 'Iceland', cursive;
     font-size: 22px;
+    text-shadow: 2px 2px 2px #3D315B;
     font-weight: bold;
     color: #FAF2A1;
-    text-shadow: 12px 12px 12px #708B75;
     margin: 0;
     margin-bottom: 1vw;
     margin-left: 29.5vw;
@@ -343,7 +343,7 @@ body {
     font-size: 22px;
     font-weight: bold; 
     color: #FAF2A1;
-    text-shadow: 12px 12px 12px #708B75;
+    text-shadow: 2px 2px 2px #3D315B;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -357,9 +357,9 @@ body {
     background-color: #444B6E;
     margin-left: 3.8em;
     margin-bottom: 1em;
-    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
+    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
+    box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
   }
 
   .effects-buttons-right-hand {
@@ -369,9 +369,9 @@ body {
     background-color: #444B6E;
     margin-left: 3.5em;
     margin-bottom: 1em;
-    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
+    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
+    box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
   }
 
 
@@ -473,11 +473,61 @@ body {
   #tonematrix-mute {
     position: absolute;
     display: inline-block;
-    right: 1.5vw;
-    bottom: 46vw;
+    right: 1vw;
+    bottom: 45vw;
     font-size: 10px;
+    border: 0.5em solid #3D315B;
+    border-radius: 1em;
+  
   }
-   
+
+  #soundcloud {
+    float: right;
+    margin-top: -17vw;
+    margin-right: 10vw;
+    width: 40%;
+  }
+
+  #powered-by-sc {
+    text-decoration: none;
+    font-family: 'Iceland', cursive;
+    font-size: 22px;
+    font-weight: bold; 
+    color: #FAF2A1;
+    text-shadow: 2px 2px 2px #3D315B;
+    float: left;
+  }
+
+  #powered-by-sc i {
+    color: orange;
+    padding-left: 1vw;
+  }
+  
+
+  #startRecording, #stopRecording, #playBack, #upload {
+    border: 0.5em solid #3D315B;
+    border-radius: 1em;
+    width: 12%;
+    float: left;
+  }
+
+  #sc-buttons {
+    width: 100%;
+    height: 100%;
+    float: left;
+  }
+
+  .status {
+    font-family: 'Iceland', cursive;
+    font-size: 22px;
+    font-weight: bold; 
+    color: #FAF2A1;
+    text-shadow: 2px 2px 2px #3D315B;
+    float: left;
+    padding-left: 3vw;
+    margin: 0;
+  }
+
   #swap {
     display: none;
   }
