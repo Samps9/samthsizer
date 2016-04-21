@@ -727,10 +727,13 @@ window.onload = function() {
           oscillator.type = "sine";
         } else if( self.getAttributeForAnchor(1) ){
           oscillator.type = "triangle";
+          gain.gain.value = 0.09;
         } else if( self.getAttributeForAnchor(2) ){
-          oscillator.type = "square"
+          oscillator.type = "square";
+          gain.gain.value = 0.04;
         } else if( self.getAttributeForAnchor(3) ){
-          oscillator.type = "sawtooth"
+          oscillator.type = "sawtooth";
+          gain.gain.value = 0.06;
         } else {
           oscillator.type = "sine";
         };
