@@ -277,7 +277,7 @@
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     width: 1220;
 
-}
+  }
 
   #wrapper {
     margin: 0 auto;
@@ -472,15 +472,25 @@
     }
   }
   
-  #tonematrix-mute {
-    position: absolute;
+  #tonematrix-mute { 
     display: inline-block;
-    right: 1vw;
-    bottom: 45vw;
     font-size: 10px;
     border: 0.5em solid #3D315B;
     border-radius: 1em;
   
+  }
+
+  #help {
+    position: relative;
+    right: 2px;
+    border: 0.45em solid #3D315B;
+    border-radius: 1em;
+  }
+
+  #mute-help {
+    position: absolute;
+    left: 94%;
+    bottom: 75%;
   }
 
   #soundcloud {
@@ -528,15 +538,6 @@
     float: left;
     padding-left: 1vw;
     margin: 0;
-  }
-  
-  #help {
-    position: absolute;
-    left: 93.75%;
-    bottom: 78%;
-    width: 0.95%;
-    border: 0.45em solid #3D315B;
-    border-radius: 1em;
   }
 
   #modal-outer {
