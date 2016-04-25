@@ -1,6 +1,6 @@
 window.onload = function() {
   console.log(window.innerWidth)
-  if( window.innerWidth < 1275 ){
+  if(window.matchMedia('(max-device-width: 1274px)').matches){
 
     function Samthsizer() {
       var self = this
@@ -409,7 +409,7 @@ window.onload = function() {
             compressor.connect(gain);
 
           } else if( self.getAttributeForAnchor(5) ){
-            oscillator.connect(chorus);
+            oscillastor.connect(chorus);
             chorus.connect(gain);
 
           } else if( self.getAttributeForAnchor(6)){
