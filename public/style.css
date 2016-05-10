@@ -36,9 +36,9 @@
 
   #theremin:focus{
     
-     -webkit-box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 5em;
-      -moz-box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 5em;
-      box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 5em;
+     -webkit-box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 3em;
+      -moz-box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 3em;
+      box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 3em;
   }
 
   /*left hand*/
@@ -96,9 +96,9 @@
     background-color: #444B6E;
     margin-right: 3.8em;
     margin-bottom: 1em;
-    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+   /* -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
     -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;*/
   }
 
   .effects-buttons-left-hand {
@@ -108,9 +108,9 @@
     background-color: #444B6E;
     margin-right: 3.5em;
     margin-bottom: 1em;
-    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    /*-webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
     -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;*/
   }
 
   /*right-hand*/
@@ -118,9 +118,9 @@
   .theremin-right-hand {
     border: 1em solid #3D315B;
     border-radius: 1em;
-    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    /*-webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
     -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;*/
     width: 20%;
     height: 82em;
     position: relative;
@@ -170,9 +170,9 @@
     background-color: #444B6E;
     margin-left: 3.8em;
     margin-bottom: 1em;
-    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    /*-webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
     -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;*/
   }
 
   .effects-buttons-right-hand {
@@ -182,9 +182,9 @@
     background-color: #444B6E;
     margin-left: 3.5em;
     margin-bottom: 1em;
-    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    /*-webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
     -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
+    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;*/
   }
 
 
@@ -201,9 +201,9 @@
      -webkit-border-radius: 14px;
      -moz-border-radius: 14px;
      border-radius: 14px;
-     -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+     /*-webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
      -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-     box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+     box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;*/
      text-shadow: #7ea4bd 0 1px 0;
      color: #06426c;
      font-size: 40px;
@@ -359,9 +359,9 @@
     background-color: #444B6E;
     margin-left: 3.8em;
     margin-bottom: 1em;
-    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
+/*    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
     -moz-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
+    box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;*/
   }
 
   .effects-buttons-right-hand {
@@ -371,9 +371,9 @@
     background-color: #444B6E;
     margin-left: 3.5em;
     margin-bottom: 1em;
-    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
+  /*  -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
     -moz-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
+    box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;*/
   }
 
 
@@ -390,9 +390,9 @@
      -webkit-border-radius: 14px;
      -moz-border-radius: 14px;
      border-radius: 14px;
-     -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+     /*-webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
      -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-     box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+     box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;*/
      text-shadow: #7ea4bd 0 1px 0;
      color: #06426c;
      font-size: 12px;
@@ -444,10 +444,11 @@
 
   .note {
     position: absolute;
-    margin-top: 3vw;
+    margin-top: 4vw;
     margin-left: 50vw;
     background: #444B6E;
     -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
   }
   .note.active {
     background: #3D315B;
@@ -456,6 +457,7 @@
     pointer-events:none;
     z-index: 5;
     -webkit-animation: hit 0.3s ease-in-out;
+    -moz-animation: hit 0.3s ease-in-out;
   }
 
   @-webkit-keyframes hit {
@@ -473,6 +475,20 @@
     }
   }
   
+  @-moz-keyframes hit {
+    from {
+        background: rgba(250,242,161,0.5);
+        opacity: 1;
+        border-radius: 50%;
+        -moz-transform: scale3d(0.5,0.5,0.5);
+    }
+    to {
+        background: rgba(250,242,161,0.5);
+        opacity: 0.0;
+        border-radius: 50%;
+        -moz-transform: scale3d(1,1,1);
+    }
+  }
   #tonematrix-mute { 
     display: inline-block;
     font-size: 10px;
@@ -496,7 +512,7 @@
 
   #soundcloud {
     float: right;
-    margin-top: -17vw;
+    margin-top: -16vw;
     margin-right: 10vw;
     width: 40%;
   }

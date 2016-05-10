@@ -27,11 +27,11 @@
       // });
 
       $("#startRecording").click(function(e){
-        updateTimer(0)
+        updateTimerRecord(0)
         e.preventDefault();
         SC.record({
           progress: function(ms, avgPeak){
-            updateTimer(ms)   
+            updateTimerRecord(ms)   
           }
         })
       })
@@ -42,10 +42,10 @@
       })
     
       $("#playBack").click(function(){
-        updateTimer(0)
+        updateTimerPlayBack(0)
         SC.recordPlay({
           progress: function(ms){
-            updateTimer(ms)    
+            updateTimerPlayBack(ms)    
           }    
         })
       })
@@ -66,9 +66,14 @@
         })   
       })
 
-      function updateTimer(ms) {
+      function updateTimerRecord(ms) {
         $('.status').text("Now Recording: " + SC.Helper.millisecondsToHMS(ms));
       }
+
+      function updateTimerPlayBack(ms) {
+        $('.status').text("Playback: " + SC.Helper.millisecondsToHMS(ms));
+      }
+
     });
  
     
