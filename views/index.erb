@@ -16,16 +16,6 @@
         redirect_uri: 'https://samthsizer.herokuapp.com/callback.erb',
       })
 
-      // $('a.connect').click(function(e) {
-      //   e.preventDefault();
-      //   SC.connect().then(function() {
-      //     return SC.get('/me/tracks').then(function(myTracks){
-      //       console.log(myTracks[0].uri)
-      //       document.getElementById("sc-widget").setAttribute("src", "https://w.soundcloud.com/player/?url=" + myTracks[0].uri );
-      //     });
-      //   })
-      // });
-
       $("#startRecording").click(function(e){
         updateTimerRecord(0)
         e.preventDefault();
