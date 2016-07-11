@@ -604,7 +604,7 @@
                 return this.compNode.threshold;
             },
             set: function(value) {
-                this.compNode.threshold.value = value;
+                this.compNode.threshold.value = document.getElementById("thresh-value").innerHTML;
                 if (this._automakeup) this.makeupGain = this.computeMakeup();
             }
         },
@@ -614,7 +614,7 @@
                 return this.compNode.ratio;
             },
             set: function(value) {
-                this.compNode.ratio.value = value;
+                this.compNode.ratio.value = document.getElementById("ratio-value").innerHTML;
                 if (this._automakeup) this.makeupGain = this.computeMakeup();
             }
         },

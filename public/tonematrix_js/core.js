@@ -4,7 +4,7 @@
   var Core = tm.Class(
   {
 
-    BPM: 120,
+    BPM: parseInt(document.getElementById("bpm-display").innerHTML),
     ROWS: 11,
     COLUMNS: 16,
     NOTESIZE: 35,
@@ -19,6 +19,7 @@
 
     constructor: function (opts)
     {
+
       this.setScale(localStorage.getItem('scale') || this.currentScale);
       this.Synth = new tm.Synth(
       {

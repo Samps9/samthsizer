@@ -39,7 +39,7 @@
       tm.extend(this, opts);
 
       Synth.master = this.context.createGain();
-      Synth.master.gain.value = 0.5;
+      Synth.master.gain.value = 0.7;
 
       this.delay = this.context.createDelay();
       this.delay.delayTime.value = 0.007;
