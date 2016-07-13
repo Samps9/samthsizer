@@ -392,7 +392,7 @@
 
   #slider-names {
     float: left;
-    margin: 1.5% 1% 0 0;
+    margin: 1.5% 5.5% 0 0;
     width: 10%;
   }
 
@@ -400,17 +400,41 @@
     font-family:'Jockey One', sans-serif;
     font-size: 12px;
     color: #FAF2A1;
+    position: relative;
+  }
+
+  #rate-span {
+    top: 6px;
+  }
+
+  #feedback-span {
+    top: 5px;
+  }
+
+  #scuzz-span {
+    top: 18px;
+  }
+
+  #time-span {
+    top: 42px;
+  }
+
+  #mod-freq-span {
+    top: 64px;
+  }
+
+  #trem-rate-span {
+    top: 86px;
   }
 
   #effects-sliders {
-    height: 6px;
     width: 47%;
     margin: 4% 0 0 1%;
     float: left;
   }
 
   .track {
-    height: 7px;
+    height: 8px;
     width: 70%;
     background-color: #27153a;
     margin: 0 10%;
@@ -418,7 +442,7 @@
   }
 
   .slider {
-    height: 7px;
+    height: 8px;
     width: 8px;
     border-radius: 3px;
     background: #708B75;
@@ -434,8 +458,25 @@
     display: none;
   }
 
-  #comp-ratio {
+
+  #comp-ratio, #chorus-feedback {
     margin-top: 7.5%;
+  }
+
+   #comp-ratio-track, #comp-ratio-track .slider, #time .slider, #time .track, #mod-freq .track, #mod-freq .slider, #trem-rate .track, #trem-rate .slider {
+    height: 7px;
+  }
+
+  #chorus-rate {
+    margin-top: 13%;
+  }
+
+  #scuzz {
+    margin-top: 19%;
+  }
+
+  #time, #mod-freq, #trem-rate {
+    margin-top: 25.5%
   }
 
   .button {
@@ -687,6 +728,10 @@
 
   #havefun {
     float: left;
+  }
+
+  #submit {
+    width: 20%;
   }
 
   #swap {

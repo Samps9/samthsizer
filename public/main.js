@@ -53,8 +53,8 @@ window.onload = function() {
         });
 
         this.overdrive = new this.tuna.Overdrive({
-            outputGain: 0.0,         //0 to 1+
-            drive: 0.2,              //0 to 1
+            outputGain: 25.0,         //0 to 1+
+            drive: 0.7,              //0 to 1
             curveAmount: 1,          //0 to 1
             algorithmIndex: 2,       //0 to 5, selects one of our drive algorithms
             bypass: 0
@@ -62,7 +62,7 @@ window.onload = function() {
 
         this.delay = new this.tuna.Delay({
             feedback: 0.47,    //0 to 1+
-            delayTime: 147,    //how many milliseconds should the wet signal be delayed?
+            delayTime: 140,    //how many milliseconds should the wet signal be delayed?
             wetLevel: 0.47,    //0 to 1+
             dryLevel: 1,       //0 to 1+
             cutoff: 2000,      //cutoff frequency of the built in lowpass-filter. 20 to 22050
@@ -74,18 +74,19 @@ window.onload = function() {
             depth: 0.6,                    //0 to 1
             feedback: 0.7,                 //0 to 1+
             stereoPhase: 90,               //0 to 180
-            baseModulationFrequency: 700,  //500 to 1500
+            baseModulationFrequency: 600,  //500 to 1500
             bypass: 0
         });
 
         this.tremolo = new this.tuna.Tremolo({
-            intensity: 0.7,    //0 to 1
-            rate: 7.75,         //0.001 to 8
-            stereoPhase: 0,    //0 to 180
+            intensity: 0.63,    //0 to 1
+            rate: 3.75,         //0.001 to 8
+            stereoPhase: 100,    //0 to 180
             bypass: 0
         });
 
-        console.log(this.compressor.threshold)
+        console.log(this.tremolo.rate)
+
 
         var choose6Effects = function(effect1, effect2, effect3, effect4, effect5, effect6){
                 oscillator.connect(effect1);
@@ -559,6 +560,24 @@ window.onload = function() {
       
     })
 
+    $("#theremin").bind("mousedown", function(){
+        $("#theremin").focus();
+    })
+
+    $("#theremin").bind("mouseup mouseleave", function(){
+      $("#theremin").blur(); 
+    })
+
+    $("#help").click(function(){
+      $("#modal-outer").show();
+    })
+
+    $("#modal-outer").click(function(){
+      $("#modal-outer").hide();
+    })
+
+    // BPM controls -- not working as yet
+
     $("#submit").click(function(){
        console.log("mook")
        // tm.Synth().osc.stop(0)
@@ -569,6 +588,8 @@ window.onload = function() {
        // tm.Core().startLoop.bind(tm.Core());
 
     })
+
+    // effects sliders
 
     $(".slider").draggable({
       axis: "x",
@@ -597,23 +618,77 @@ window.onload = function() {
       console.log(value)
     })
 
-
-    $("#theremin").bind("mousedown", function(){
-        $("#theremin").focus();
+    $("#chorus-rate-slider").on("drag", function(event){
+      var value = (event.pageX/10) -21
+      if(value <= 0){
+        value = 0
+      } else if(value >= 10){
+        value = 10
+      }
+      $("#rate-value").html(value)
+      console.log(value)
     })
 
-    $("#theremin").bind("mouseup mouseleave", function(){
-      $("#theremin").blur(); 
+    $("#chorus-feedback-slider").on("drag", function(event){
+      var value = (event.pageX/300) - 0.05555
+      if(value <= 0.6){
+        value = 0.6
+      } else if(value >= 0.99){
+        value = 0.99
+      }
+      $("#chorus-feedback-value").html(value)
+      console.log(value)
     })
 
-    $("#help").click(function(){
-      $("#modal-outer").show();
+    $("#scuzz-slider").on("drag", function(event){
+      var value = (event.pageX/350)  
+      if(value <= 0.62){
+        value = 0
+      } else if (value >= 0.86){
+        value = 0.9
+      }
+
+      $("#scuzz-value").html(value)
+      console.log(value)
     })
 
-    $("#modal-outer").click(function(){
-      $("#modal-outer").hide();
+    $("#time-slider").on("drag", function(event){
+      var value = event.pageX * 0.666
+
+      if(value <= 140){
+        value = 140
+      } else if(value >= 200){
+        value = 200
+      }
+
+      $("#time-value").html(value)
+      console.log(value)
     })
 
-  // }
+    $("#mod-freq-slider").on("drag", function(event){
+      var value = event.pageX * 3.3333
+
+      if(value <= 730){
+        value = 600
+      } else if(value >= 1000){
+        value = 1000
+      }
+
+      $("#mod-freq-value").html(value)
+      console.log(value)
+    })
+
+    $("#trem-rate-slider").on("drag", function(event){
+      var value = event.pageX * 0.01616161  
+
+      if(value <= 3.7){
+        value = 3
+      } else if(value > 5 ){
+        value = 6
+      }
+
+      $("#trem-rate-value").html(value)
+      console.log(value)
+    })
 
 }
