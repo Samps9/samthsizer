@@ -1,266 +1,4 @@
-@media screen and (min-device-width: 274px){ 
-  body {
-    margin: 0;
-    padding: 0;
-     background: -webkit-gradient(linear, left top, left bottom, from(#759AAB), to(#708B75));
-     background: -webkit-linear-gradient(top, #708B75, #759AAB);
-     background: -moz-linear-gradient(top, #708B75, #759AAB);
-     background: -ms-linear-gradient(top, #708B75, #759AAB);
-     background: -o-linear-gradient(top, #708B75, #759AAB);
-     background-image: -ms-linear-gradient(top, #708B75 0%, #759AAB 100%);
-     background-repeat: no-repeat;
-     background-size: cover;
-     -webkit-touch-callout:none;
-     -webkit-user-select:none;
-     -khtml-user-select:none;
-     -moz-user-select:none;
-     -ms-user-select:none;
-     user-select:none;
-     -webkit-tap-highlight-color:rgba(0,0,0,0);
 
-  }
-
-  #wrapper {
-    margin: 0 auto;
-    padding-bottom: 55%;
-  }
-
-  #theremin {
-    -webkit-touch-callout:none;
-     -webkit-user-select:none;
-     -khtml-user-select:none;
-     -moz-user-select:none;
-     -ms-user-select:none;
-     user-select:none;
-     -webkit-tap-highlight-color:rgba(0,0,0,0);
-    transition: 0.6s;
-  }
-
-  #theremin:focus{
-    
-     -webkit-box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 3em;
-      -moz-box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 3em;
-      box-shadow: rgba(255,255,255,0.6) 0 0 0, inset rgba(255,255,255,0.6) 0 0 3em;
-  }
-
-  /*left hand*/
-  .theremin-left-hand {
-    border: 1em solid #3D315B;
-    border-radius: 1em;
-    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    width: 20%;
-    height: 82em;
-    position: relative;
-    left: 12%;
-    background-color: #444B6E;
-
-  }
-
-  .details-left-hand {
-    margin: 0 auto;
-    
-  }
-
-  .frqcy-left-hand {
-    font-family: 'Iceland', cursive;
-    font-size: 42px;
-    font-weight: bold;
-    color: #FAF2A1;
-    text-shadow: 12px 12px 12px #708B75;
-    margin: 0;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-    margin-left: 12.5vw;
-  }
-
-  .controls-left-hand{
-    float: right;
-  }
-
-  .controls-left-hand p {
-    font-family: 'Iceland', cursive;
-    font-size: 42px;
-    font-weight: bold; 
-    color: #FAF2A1;
-    text-shadow: 12px 12px 12px #708B75;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    margin-right: 1.2em;
-  }
-
-  .wave-form-buttons-left-hand {
-    float: right;
-    border: 0.5em solid #3D315B;
-    border-radius: 1em;
-    background-color: #444B6E;
-    margin-right: 3.8em;
-    margin-bottom: 1em;
-   /* -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;*/
-  }
-
-  .effects-buttons-left-hand {
-    float: right;
-    border: 0.5em solid #3D315B;
-    border-radius: 1em;
-    background-color: #444B6E;
-    margin-right: 3.5em;
-    margin-bottom: 1em;
-    /*-webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;*/
-  }
-
-  /*right-hand*/
-
-  .theremin-right-hand {
-    border: 1em solid #3D315B;
-    border-radius: 1em;
-    /*-webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;*/
-    width: 20%;
-    height: 82em;
-    position: relative;
-    left: 36%;
-    background-color: #444B6E;
-  }
-
-  .details-right-hand {
-    margin: 0 auto;
-    
-  }
-
-  .frqcy-right-hand {
-    font-family: 'Iceland', cursive;
-    font-size: 42px;
-    font-weight: bold;
-    color: #FAF2A1;
-    text-shadow: 12px 12px 12px #708B75;
-    margin: 0;
-    margin-bottom: 1vw;
-    margin-left: 65vw;
-    margin-top: 1vw;
-  }
-
-  .controls-right-hand{
-    float: left;
-    margin-top: 5vw;
-
-  }
-
-  .controls-right-hand p {
-    font-family: 'Iceland', cursive;
-    font-size: 42px;
-    font-weight: bold; 
-    color: #FAF2A1;
-    text-shadow: 12px 12px 12px #708B75;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    margin-left: 1.25em;
-  }
-
-  .wave-form-buttons-right-hand {
-    float: left;
-    border: 0.5em solid #3D315B;
-    border-radius: 1em;
-    background-color: #444B6E;
-    margin-left: 3.8em;
-    margin-bottom: 1em;
-    /*-webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;*/
-  }
-
-  .effects-buttons-right-hand {
-    float: left;
-    border: 0.5em solid #3D315B;
-    border-radius: 1em;
-    background-color: #444B6E;
-    margin-left: 3.5em;
-    margin-bottom: 1em;
-    /*-webkit-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 1em, inset rgba(255,255,255,0.4) 0 0 1em;*/
-  }
-
-
-  .button {
-     border: 2px solid #0a3c59;
-     background: #708B75;
-     background: -webkit-gradient(linear, left top, left bottom, from(#759AAB), to(#FAF2A1));
-     background: -webkit-linear-gradient(top, #FAF2A1, #708B75);
-     background: -moz-linear-gradient(top, #FAF2A1, #708B75);
-     background: -ms-linear-gradient(top, #FAF2A1, #708B75);
-     background: -o-linear-gradient(top, #FAF2A1, #708B75);
-     background-image: -ms-linear-gradient(top, #FAF2A1 0%, #708B75 100%);
-     padding: 7.5px 15px;
-     -webkit-border-radius: 14px;
-     -moz-border-radius: 14px;
-     border-radius: 14px;
-     -webkit-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-     -moz-box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-     box-shadow: rgba(255,255,255,0.4) 0 1px 0, inset rgba(255,255,255,0.4) 0 1px 0;
-     text-shadow: #7ea4bd 0 1px 0;
-     color: #06426c;
-     font-size: 40px;
-     font-family:'Jockey One', sans-serif;
-     text-decoration: none;
-     vertical-align: middle;
-     text-align: center;
-     margin: 0.7em;
-     display: block;
-  }
-
-  .button:active {
-     border: 2px solid #0a3c59;
-     text-shadow: #1e4158 0 1px 0;
-     background: #FAF2A1;
-     background: -webkit-gradient(linear, left top, left bottom, from(#759AAB), to(#FAF2A1));
-     background: -webkit-linear-gradient(top, #FAF2A1, #759AAB);
-     background: -moz-linear-gradient(top, #FAF2A1, #759AAB);
-     background: -ms-linear-gradient(top, #FAF2A1, #759AAB);
-     background: -o-linear-gradient(top, #FAF2A1, #759AAB);
-     background-image: -ms-linear-gradient(top, #FAF2A1 0%, #759AAB 100%);
-     color: #fff;
-    }
-
-  .clicked {
-     text-shadow: #1e4158 0 1px 0;
-     border: 2px solid #0a3c59;
-     background: #759AAB;
-     background: -webkit-gradient(linear, left top, left bottom, from(#FAF2A1), to(#FAF2A1));
-     background: -webkit-linear-gradient(top, #FAF2A1, #759AAB);
-     background: -moz-linear-gradient(top, #FAF2A1, #759AAB);
-     background: -ms-linear-gradient(top, #FAF2A1, #759AAB);
-     background: -o-linear-gradient(top, #FAF2A1, #759AAB);
-     background-image: -ms-linear-gradient(top, #FAF2A1 0%, #759AAB 100%);
-     color: #fff;
-     margin-top: 0.7em;
-    }
-
-   
-  #swap {
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 3vw;
-    border: 0.5em solid #3D315B;
-    border-radius: 1em;
-    background-color: #444B6E;
-    font-size: 32px;
-  }
-
-  #tonematrix-mute {
-    display: none;
-  }
-}
-
-@media screen and (min-device-width: 1275px){
   body {
     margin-bottom: 5vw;
     padding: 0;
@@ -363,7 +101,8 @@
     border-radius: 1em;
     background-color: #444B6E;
     margin-left: 3.8em;
-    margin-bottom: 1em;
+    margin-bottom: 3em;
+    padding: 5px;
 /*    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
     -moz-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
     box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;*/
@@ -614,8 +353,8 @@
 
   #soundcloud {
     float: right;
-    margin-top: -16vw;
-    margin-right: 10vw;
+    margin-top: -12vw;
+    margin-right: 9vw;
     width: 40%;
   }
 
@@ -676,7 +415,7 @@
     background-color: black;
     border: 1px solid black;
     border-radius: 1em;
-    opacity: 0.9;
+    opacity: 0.95;
   }
 
   #modal-text {
@@ -706,8 +445,8 @@
   }
 
   .modal-info {
-    width: 30%;
-    margin-left: 2vw;
+    width: 25%;
+    margin-left: 4vw;
     float: left;
   }
 
@@ -738,5 +477,9 @@
     display: none;
   }
 
+  #bpm, #bpm-entry, #bpm-display, #submit {
+    display: none;
+  }
+
   
-}
+
