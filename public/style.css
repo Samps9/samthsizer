@@ -92,7 +92,7 @@
     text-align: center;
     margin: 0;
     padding: 0;
-    margin-right: 33%;
+    margin-right: 31%;
   }
 
   .wave-form-buttons-right-hand {
@@ -108,8 +108,12 @@
     box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;*/
   }
 
+  .wave-form p {
+    margin-left: 2vw;
+  }
+
   .effects {
-    width: 100%;
+    width: 112%;
   }
 
   .effects-buttons-right-hand {
