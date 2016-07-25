@@ -113,7 +113,7 @@
   }
 
   .effects {
-    width: 112%;
+    width: 28vw;
   }
 
   .effects-buttons-right-hand {
@@ -147,11 +147,11 @@
   }
 
   #rate-span {
-    top: 6px;
+    top: 12px;
   }
 
   #feedback-span {
-    top: 5px;
+    top: 10px;
   }
 
   #scuzz-span {
@@ -167,7 +167,7 @@
   }
 
   #trem-rate-span {
-    top: 102px;
+    top: 105px;
   }
 
   #effects-sliders {
