@@ -85,7 +85,7 @@
 
   .controls-right-hand p {
     font-family: 'Iceland', cursive;
-    font-size: 22px;
+    font-size: 1.7vw;
     font-weight: bold; 
     color: #FAF2A1;
     text-shadow: 2px 2px 2px #3D315B;
@@ -141,7 +141,7 @@
 
   #slider-names span {
     font-family:'Jockey One', sans-serif;
-    font-size: 12px;
+    font-size: 1vw;
     color: #FAF2A1;
     position: relative;
   }
@@ -155,23 +155,23 @@
   }
 
   #scuzz-span {
-    top: 18px;
+    top: 27px;
   }
 
   #time-span {
-    top: 42px;
+    top: 52px;
   }
 
   #mod-freq-span {
-    top: 64px;
+    top: 82px;
   }
 
   #trem-rate-span {
-    top: 86px;
+    top: 102px;
   }
 
   #effects-sliders {
-    width: 47%;
+    width: 10vw;
     margin: 4% 0 0 1%;
     float: left;
   }
@@ -215,11 +215,11 @@
   }
 
   #scuzz {
-    margin-top: 19%;
+    margin-top: 25%;
   }
 
   #time, #mod-freq, #trem-rate {
-    margin-top: 25.5%
+    margin-top: 28.5%
   }
 
   .button {
