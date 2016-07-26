@@ -1,6 +1,8 @@
-
+  html {
+    height: 100%;
+  }
   body {
-    margin-bottom: 5vw;
+    
     padding: 0;
     background: -webkit-gradient(linear, left top, left bottom, from(#759AAB), to(#708B75));
     background: -webkit-linear-gradient(top, #708B75, #759AAB);
@@ -9,7 +11,7 @@
     background: -o-linear-gradient(top, #708B75, #759AAB);
     background-image: -ms-linear-gradient(top, #708B75 0%, #759AAB 100%);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     -webkit-touch-callout:none;
     -webkit-user-select:none;
     -khtml-user-select:none;
@@ -18,7 +20,7 @@
     user-select:none;
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     width: 100%;
-
+    min-height: 100%
   }
 
   #wrapper {
@@ -52,8 +54,8 @@
     -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.3) 0 0 0.4em;
     -moz-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.3) 0 0 0.4em;
     box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.3) 0 0 0.4em;
-    width: 10%;
-    height: 35em;
+    width: 125px;
+    height: 570px;
     position: relative;
     left: 10%;
     background-color: #444B6E;
@@ -85,14 +87,13 @@
 
   .controls-right-hand p {
     font-family: 'Iceland', cursive;
-    font-size: 1.7vw;
+    font-size: 1.4em;
     font-weight: bold; 
     color: #FAF2A1;
     text-shadow: 2px 2px 2px #3D315B;
-    text-align: center;
     margin: 0;
     padding: 0;
-    margin-right: 31%;
+    margin-left: 64px;
   }
 
   .wave-form-buttons-right-hand {
@@ -108,12 +109,10 @@
     box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;*/
   }
 
-  .wave-form p {
-    margin-left: 2vw;
-  }
 
   .effects {
-    width: 28vw;
+    width: 400px;
+    float: left;
   }
 
   .effects-buttons-right-hand {
@@ -141,7 +140,7 @@
 
   #slider-names span {
     font-family:'Jockey One', sans-serif;
-    font-size: 1vw;
+    font-size: 0.8em;
     color: #FAF2A1;
     position: relative;
   }
@@ -171,14 +170,14 @@
   }
 
   #effects-sliders {
-    width: 10vw;
+    width: 75px;
     margin: 4% 0 0 1%;
     float: left;
   }
 
   .track {
     height: 8px;
-    width: 70%;
+    width: 90px;
     background-color: #27153a;
     margin: 0 10%;
     border-radius: 3px;
@@ -203,7 +202,7 @@
 
 
   #comp-ratio, #chorus-feedback {
-    margin-top: 7.5%;
+    margin-top: 10px;
   }
 
    #comp-ratio-track, #comp-ratio-track .slider, #time .slider, #time .track, #mod-freq .track, #mod-freq .slider, #trem-rate .track, #trem-rate .slider {
@@ -211,15 +210,15 @@
   }
 
   #chorus-rate {
-    margin-top: 13%;
+    margin-top: 18px;
   }
 
   #scuzz {
-    margin-top: 25%;
+    margin-top: 26px;
   }
 
   #time, #mod-freq, #trem-rate {
-    margin-top: 28.5%
+    margin-top: 38px;
   }
 
   .button {
@@ -357,8 +356,8 @@
 
   #soundcloud {
     float: right;
-    margin-top: -12vw;
-    margin-right: 9vw;
+    margin-top: -140px;
+    margin-right: 6vw;
     width: 40%;
   }
 
@@ -383,6 +382,10 @@
     border-radius: 1em;
     width: 12%;
     float: left;
+  }
+
+  #soundcloud .button {
+    width: 10vw;
   }
 
   #sc-buttons {
@@ -484,6 +487,15 @@
   #bpm, #bpm-entry, #bpm-display, #submit {
     display: none;
   }
+
+@media only screen and (min-width: 1825px){
+  #soundcloud {
+    float: right;
+    margin-top: -140px;
+    margin-right: 20vw;
+    width: 30%;
+  }
+}
 
   
 
