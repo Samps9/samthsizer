@@ -4,7 +4,7 @@
   var Core = tm.Class(
   {
 
-    BPM: parseInt(document.getElementById("bpm-display").innerHTML),
+    BPM: 120,
     ROWS: 11,
     COLUMNS: 16,
     NOTESIZE: 34,
@@ -159,9 +159,23 @@
 
     events: function ()
     {
+      var self = this;
       tm.$('tonematrix').on('click', this.toggleNote.bind(this), false);
       tm.$('tonematrix').on('mousedown', this, false);
       tm.$('tonematrix').on('mousemove', this, false);
+      tm.$("submit").on("click", function(){
+        if( isNaN( parseInt(tm.$("bpm-entry").value) ) == false ){
+          self.stopLoop.bind(self);
+          tm.$("bpm-display").innerHTML = tm.$("bpm-entry").value;
+          self.setBpm(parseInt(tm.$("bpm-display").innerHTML));  
+
+        } else {
+          console.log("mook");
+          tm.$("bpm-display").innerHTML = 120;
+          self.setBpm(parseInt(tm.$("bpm-display").innerHTML));  
+        }
+          
+      }, false);
       window.addEventListener('mouseup', this, false);
       window.addEventListener('blur', this.stopLoop.bind(this), false);
       window.addEventListener('focus', this.startLoop.bind(this), false);

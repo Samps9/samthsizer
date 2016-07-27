@@ -576,19 +576,6 @@ window.onload = function() {
       $("#modal-outer").hide();
     })
 
-    // BPM controls -- not working as yet
-
-    $("#submit").click(function(){
-       console.log("mook")
-       // tm.Synth().osc.stop(0)
-       // tm.Core().stopLoop.bind(tm.Core());
-       // tm.Core().audioLoop();
-       // $("#bpm-display").html( $("#bpm-entry").val() )
-       // tm.Core().setBpm(parseInt(document.getElementById("bpm-display").innerHTML))
-       // tm.Core().startLoop.bind(tm.Core());
-
-    })
-
     // effects sliders
 
     $(".slider").draggable({

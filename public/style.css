@@ -1,8 +1,9 @@
   html {
     height: 100%;
+    overflow: hidden;
   }
   body {
-    
+    margin: 0;
     padding: 0;
     background: -webkit-gradient(linear, left top, left bottom, from(#759AAB), to(#708B75));
     background: -webkit-linear-gradient(top, #708B75, #759AAB);
@@ -25,7 +26,7 @@
 
   #wrapper {
     margin: 0 auto;
-    padding-bottom: 2vw;
+    padding: 0;
   }
 
   #theremin {
@@ -104,9 +105,6 @@
     margin-left: 3.8em;
     margin-bottom: 3em;
     padding: 5px;
-/*    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
-    -moz-box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;
-    box-shadow: rgba(255,255,255,0.4) 0 0 0, inset rgba(255,255,255,0.4) 0 0 1em;*/
   }
 
 
@@ -354,11 +352,58 @@
     bottom: 75%;
   }
 
+  #bpm-div {
+    float: right;
+    width: 250px;
+    margin-top: -140px;
+    margin-right: 25px;
+  }
+
+  #bpm-div span {
+    font-family: 'Iceland', cursive;
+    font-size: 22px;
+    font-weight: bold; 
+    color: #FAF2A1;
+    text-shadow: 2px 2px 2px #3D315B;
+  }
+
+  #bpm-entry {
+    width: 60px;
+    border: 0.5em solid #3D315B;
+    border-radius: 0.5em;
+    background-color: #444B6E;
+    color: #a6a6a7;
+  }
+
+  ::-webkit-input-placeholder {
+    color: #a6a6a7;
+  }
+
+  :-moz-placeholder {
+    color: #a6a6a7;
+  }
+
+  ::-moz-placeholder{
+    color: #a6a6a7;
+  }
+
+  :-ms-input-placeholder {
+    color: #a6a6a7;
+  }
+
+   #submit {
+    width: 120px;
+    border: 0.5em solid #3D315B;
+    border-radius: 1em;
+    margin-left: 0;
+  }
+
   #soundcloud {
     float: right;
-    margin-top: -140px;
-    margin-right: 6vw;
-    width: 40%;
+    margin-top: -200px;
+    margin-right: 20vw;
+    margin-bottom: 0;
+    width: 30%;
   }
 
   #powered-by-sc {
@@ -385,7 +430,7 @@
   }
 
   #soundcloud .button {
-    width: 10vw;
+    width: 7vw;
   }
 
   #sc-buttons {
@@ -476,15 +521,7 @@
     float: left;
   }
 
-  #submit {
-    width: 20%;
-  }
-
   #swap {
-    display: none;
-  }
-
-  #bpm, #bpm-entry, #bpm-display, #submit {
     display: none;
   }
 
