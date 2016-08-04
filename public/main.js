@@ -19,7 +19,15 @@
 
       this.setupEventListeners = function() {
       
-        this.myCanvas.addEventListener("mousedown", this.playSound);
+        // this.myCanvas.addEventListener("mousedown", this.playSound);
+        this.myCanvas.addEventListener("mousedown", function(event){
+          if(event.button == 0){
+            self.playSound(event)
+          } else {
+            event.preventDefault();
+            return false;
+          }
+        }, false)
         this.myCanvas.addEventListener("mouseup", this.stopSound);
         this.myCanvas.addEventListener("mouseleave", this.stopSound);
       };
@@ -414,17 +422,17 @@
           } else {
             oscillator.connect(gain);
           }
-
-        gain.connect(myAudioContext.destination);
-
-        oscillator.start(0);
         
-        self.changeFrequency(event);
+          gain.connect(myAudioContext.destination);
 
-        self.myCanvas.addEventListener("mousemove", self.changeFrequency);
+          oscillator.start(0);
+          
+          self.changeFrequency(event);
 
-        self.myCanvas.addEventListener("mouseleave", self.stopSound);
+          self.myCanvas.addEventListener("mousemove", self.changeFrequency);
 
+          self.myCanvas.addEventListener("mouseleave", self.stopSound);
+         
       }
 
       this.stopSound = function(event) {
@@ -557,8 +565,10 @@
       
     })
 
-    $("#theremin").bind("mousedown", function(){
+    $("#theremin").bind("mousedown", function(event){
+      if(event.button == 0){
         $("#theremin").focus();
+      }
     })
 
     $("#theremin").bind("mouseup mouseleave", function(){
