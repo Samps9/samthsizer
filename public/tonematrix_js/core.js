@@ -7,7 +7,7 @@
     BPM: 120,
     ROWS: 11,
     COLUMNS: 16,
-    NOTESIZE: 35,
+    NOTESIZE: 34,
     currentScale: 'Pentatonic',
     SCALES: {
       Pentatonic: ['C6', 'A5', 'G5', 'E5', 'D5', 'C5', 'A4', 'G4', 'E4', 'D4', 'C4', 'A3'],
@@ -19,6 +19,7 @@
 
     constructor: function (opts)
     {
+
       this.setScale(localStorage.getItem('scale') || this.currentScale);
       this.Synth = new tm.Synth(
       {
@@ -158,9 +159,23 @@
 
     events: function ()
     {
+      var self = this;
       tm.$('tonematrix').on('click', this.toggleNote.bind(this), false);
       tm.$('tonematrix').on('mousedown', this, false);
       tm.$('tonematrix').on('mousemove', this, false);
+      tm.$("submit").on("click", function(){
+        if( isNaN( parseInt(tm.$("bpm-entry").value) ) == false ){
+          self.stopLoop.bind(self);
+          tm.$("bpm-display").innerHTML = tm.$("bpm-entry").value;
+          self.setBpm(parseInt(tm.$("bpm-display").innerHTML));  
+
+        } else {
+          console.log("mook");
+          tm.$("bpm-display").innerHTML = 120;
+          self.setBpm(parseInt(tm.$("bpm-display").innerHTML));  
+        }
+          
+      }, false);
       window.addEventListener('mouseup', this, false);
       window.addEventListener('blur', this.stopLoop.bind(this), false);
       window.addEventListener('focus', this.startLoop.bind(this), false);

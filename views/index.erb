@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=0.3, user-scalable=no" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" charset="UTF-8">
   <title>Samthsizer - Theremin style web synth</title>
   <link rel="shortcut icon" href="/images/favicon (2).ico" type="image/x-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
+
   <script type="text/javascript" src="//connect.soundcloud.com/sdk.js"></script>
   <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
 
@@ -15,16 +17,6 @@
         client_id: '<%= ENV["SAMTHSIZER_SC_CLIENT_ID"] %>',
         redirect_uri: 'https://samthsizer.herokuapp.com/callback.erb',
       })
-
-      // $('a.connect').click(function(e) {
-      //   e.preventDefault();
-      //   SC.connect().then(function() {
-      //     return SC.get('/me/tracks').then(function(myTracks){
-      //       console.log(myTracks[0].uri)
-      //       document.getElementById("sc-widget").setAttribute("src", "https://w.soundcloud.com/player/?url=" + myTracks[0].uri );
-      //     });
-      //   })
-      // });
 
       $("#startRecording").click(function(e){
         updateTimerRecord(0)
@@ -86,13 +78,10 @@
 
   <div id="wrapper">
 
-    <div id="dropdown">
-      
-    </div>
 
     <div id="details" class="details-right-hand">
 
-      <p id="frqcy" class="frqcy-right-hand">FRQCY:
+      <p id="frqcy" class="frqcy-right-hand">FREQ:
         <span id="frequency"></span>
       </p>
 
@@ -117,13 +106,83 @@
 
        <div class="effects">
         <p>EFFECTS</p>
-        <div id="effects-buttons" class="effects-buttons-right-hand">
-          <a class="button"  id="compressor">Compressor</a>
-          <a class="button"  id="chorus">Chorus</a>
-          <a class="button"  id="overdrive">Overdrive</a>
-          <a class="button"  id="delay">Delay</a>
-          <a class="button"  id="phaser">Phaser</a>
-          <a class="button"  id="tremolo">Tremolo</a>
+        <div id="here-only-for-measurements" class="effects-buttons-right-hand">
+          <div id="effects-buttons">
+            <a class="button"  id="compressor">Compressor</a>
+            <a class="button"  id="chorus">Chorus</a>
+            <a class="button"  id="overdrive">Overdrive</a>
+            <a class="button"  id="delay">Delay</a>
+            <a class="button"  id="phaser">Phaser</a>
+            <a class="button"  id="tremolo">Tremolo</a>
+          </div>
+
+          <div id="slider-names">
+            <span>Thresh. <span id="thresh-value" class="slider-value">-100</span></span>
+            <span>Ratio <span id="ratio-value" class="slider-value">1</span></span>
+           
+            <span id="rate-span">Rate <span id="rate-value" class="slider-value">0</span></span>
+            <span id="feedback-span">Feedback <span id="chorus-feedback-value" class="slider-value">0</span></span>
+         
+            <span id="scuzz-span">Scuzz <span id="scuzz-value" class="slider-value">0</span></span>
+
+            <span id="time-span">Time <span id="time-value" class="slider-value">140</span></span>
+
+             <span id="mod-freq-span">Mod.Freq. <span id="mod-freq-value" class="slider-value">600</span></span>
+
+             <span id="trem-rate-span">Rate <span id="trem-rate-value" class="slider-value">3</span></span>
+          </div>
+
+          <div id="effects-sliders">
+
+            <div id="comp-thresh" class="sliders">
+              <div class="track">
+               <div id="comp-thresh-slider" class="slider"></div>
+             </div>
+            </div>
+
+            <div id="comp-ratio" class="sliders">
+              <div class="track" id="comp-ratio-track">
+               <div id="comp-ratio-slider" class="slider"></div>
+             </div>
+            </div>
+            
+            <div id="chorus-rate" class="sliders">
+              <div class="track" id="chorus-rate-track">
+               <div id="chorus-rate-slider" class="slider"></div>
+             </div>
+            </div>
+            
+             <div id="chorus-feedback" class="sliders">
+              <div class="track" id="chorus-feedback-track">
+               <div id="chorus-feedback-slider" class="slider"></div>
+             </div>
+            </div>
+            
+            <div id="scuzz" class="sliders">
+              <div class="track" id="scuzz-track">
+               <div id="scuzz-slider" class="slider"></div>
+             </div>
+            </div>
+            
+            <div id="time" class="sliders">
+              <div class="track" id="time-track">
+               <div id="time-slider" class="slider"></div>
+             </div>
+            </div>
+
+            <div id="mod-freq" class="sliders">
+              <div class="track" id="mod-freq-track">
+               <div id="mod-freq-slider" class="slider"></div>
+             </div>
+            </div>
+
+            <div id="trem-rate" class="sliders">
+              <div class="track" id="trem-rate-track">
+               <div id="trem-rate-slider" class="slider"></div>
+             </div>
+            </div>
+    
+          </div>
         </div>
       </div>
 
@@ -132,8 +191,16 @@
     
     <div id="tonematrix"></div>
     
-    
+    <div id="bpm-div">
+      <input id="bpm-entry" placeholder="120" type="number">
+      <span id="bpm">BPM:</span>
+      <span  id="bpm-display">120</span>
+      <a id="submit" class="button">Enter</a>
+    </div>
+
     <a class="button right"  id="swap">Hand-Swap</a>
+
+
     <div id="mute-help">
       <a class="button" id="tonematrix-mute">&#128266;</a>
       <a class="button" id="help"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
