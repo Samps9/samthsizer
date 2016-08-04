@@ -22,13 +22,20 @@
         // this.myCanvas.addEventListener("mousedown", this.playSound);
         this.myCanvas.addEventListener("mousedown", function(event){
           if(event.button == 0){
-            self.playSound(event)
+            self.playSound(event);
           } else {
             event.preventDefault();
             return false;
           }
         }, false)
-        this.myCanvas.addEventListener("mouseup", this.stopSound);
+        this.myCanvas.addEventListener("mouseup", function(event){
+          if(event.button == 0){
+            self.stopSound(event);
+          } else {
+            event.preventDefault();
+            return false;
+          }
+        });
         this.myCanvas.addEventListener("mouseleave", this.stopSound);
       };
 
@@ -571,8 +578,10 @@
       }
     })
 
-    $("#theremin").bind("mouseup mouseleave", function(){
-      $("#theremin").blur(); 
+    $("#theremin").bind("mouseup mouseleave", function(event){
+      if(event.button == 0){
+        $("#theremin").blur();
+      } 
     })
 
     $("#help").click(function(){
