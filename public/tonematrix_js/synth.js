@@ -7,7 +7,7 @@
       SINE: 0,
       SAWTOOTH: 2
     },
-    BASEOCTAVE: 5.75,
+    BASEOCTAVE: 5.5,
     NOTES: {
       'C': 60,
       'C#': 61,
@@ -25,10 +25,10 @@
 
     context: new AudioContext(),
 
-    attack: 90,
-    decay: 90,
-    sustain: 10,
-    release: 20,
+    attack: 0,
+    decay: 0,
+    sustain: 0,
+    release: 5,
 
     voices: {},
 
@@ -39,7 +39,7 @@
       tm.extend(this, opts);
 
       Synth.master = this.context.createGain();
-      Synth.master.gain.value = 0.7;
+      Synth.master.gain.value = 0.5;
 
       this.delay = this.context.createDelay();
       this.delay.delayTime.value = 0.007;

@@ -1,6 +1,3 @@
-window.onload = function() {
-  console.log(window.innerWidth)
-
     function SamthsizerDT() {
       var self = this
       var oscillator;
@@ -21,7 +18,7 @@ window.onload = function() {
       }
 
       this.setupEventListeners = function() {
-
+      
         this.myCanvas.addEventListener("mousedown", this.playSound);
         this.myCanvas.addEventListener("mouseup", this.stopSound);
         this.myCanvas.addEventListener("mouseleave", this.stopSound);
@@ -30,7 +27,7 @@ window.onload = function() {
       this.playSound = function(event) {
         oscillator = myAudioContext.createOscillator();
         var gain = myAudioContext.createGain();
-        gain.gain.value = 0.09;
+        gain.gain.value = 0.07;
 
         //tuna variables
         this.tuna = new Tuna(myAudioContext);
@@ -84,9 +81,6 @@ window.onload = function() {
             stereoPhase: 100,    //0 to 180
             bypass: 0
         });
-
-        console.log(this.tremolo.rate)
-
 
         var choose6Effects = function(effect1, effect2, effect3, effect4, effect5, effect6){
                 oscillator.connect(effect1);
@@ -455,16 +449,19 @@ window.onload = function() {
       };
 
       this.changeFrequency = function(event) {
-        if (event.type == "mousedown" || event.type == "mousemove") {
-          self.showFrequency(event.y);
+        if (event.type == "mousedown" || event.type == "mousemove") {  
+            self.showFrequency(event.y);
         } else if (event.type == "touchstart" || event.type == "touchmove") {
           var touch = event.touches[0];
           self.showFrequency(touch.pageY);
         }
+        
       };
 
     };
   
+  window.onload = function() {
+    console.log(window.innerWidth)
 
     var mySamthsizerDT = new SamthsizerDT();
     mySamthsizerDT.setupEventListeners();
@@ -581,7 +578,22 @@ window.onload = function() {
     $(".slider").draggable({
       axis: "x",
       containment: "parent",
+      stop: function(){
+        $(".slider").css("cursor", "-webkit-grab")
+        $(".track").css("cursor", "-webkit-grab")
+      }
     })
+
+
+    $(".slider").on("drag mousedown", function(){
+        $(".slider").css("cursor", "-webkit-grabbing")
+        $(".track").css("cursor", "-webkit-grabbing")
+    });
+
+    $(".slider").on("mouseup", function(){
+        $(".slider").css("cursor", "-webkit-grab")
+        $(".track").css("cursor", "-webkit-grab")
+      });
 
     $("#comp-thresh-slider").on("drag", function(event){
         var value = event.pageX - (document.getElementById("here-only-for-measurements").offsetWidth) - 10
