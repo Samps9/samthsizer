@@ -165,20 +165,52 @@
       tm.$('tonematrix').on('mousemove', this, false);
       tm.$("submit").on("click", function(){
         if( isNaN( parseInt(tm.$("bpm-entry").value) ) == false ){
-          self.stopLoop.bind(self);
-          tm.$("bpm-display").innerHTML = tm.$("bpm-entry").value;
-          self.setBpm(parseInt(tm.$("bpm-display").innerHTML));  
-
+          if( tm.$("bpm-entry").value <= 500 &&  tm.$("bpm-entry").value >= 0){
+            self.stopLoop.bind(self);
+            tm.$("bpm-display").innerHTML = tm.$("bpm-entry").value;
+            self.setBpm(parseInt(tm.$("bpm-display").innerHTML));  
+          } else {
+            alert("Invalid bpm");
+            tm.$("bpm-display").innerHTML = 120;
+            tm.$("bpm-entry").value = 120;
+            self.setBpm(parseInt(tm.$("bpm-display").innerHTML));
+          }
         } else {
-          console.log("mook");
+          alert("Invalid bpm");
           tm.$("bpm-display").innerHTML = 120;
+          tm.$("bpm-entry").value = 120;
           self.setBpm(parseInt(tm.$("bpm-display").innerHTML));  
         }
           
       }, false);
+      
       window.addEventListener('mouseup', this, false);
       window.addEventListener('blur', this.stopLoop.bind(this), false);
       window.addEventListener('focus', this.startLoop.bind(this), false);
+      window.addEventListener("keydown", function(event){
+        if(event.keyCode == 13){
+          console.log("mook")
+          if( isNaN( parseInt(tm.$("bpm-entry").value) ) == false ){
+            if( tm.$("bpm-entry").value <= 500 &&  tm.$("bpm-entry").value >= 0){
+             self.stopLoop.bind(self);
+              tm.$("bpm-display").innerHTML = tm.$("bpm-entry").value;
+              self.setBpm(parseInt(tm.$("bpm-display").innerHTML));  
+            } else {
+              alert("Invalid bpm");
+              tm.$("bpm-display").innerHTML = 120;
+              tm.$("bpm-entry").value = 120;
+              self.setBpm(parseInt(tm.$("bpm-display").innerHTML));
+            }
+          } else {
+            alert("Invalid bpm");
+            tm.$("bpm-display").innerHTML = 120;
+            tm.$("bpm-entry").value = 120;
+            self.setBpm(parseInt(tm.$("bpm-display").innerHTML));  
+          }
+        } else {
+          return false;
+        }
+      }, false);
     }
   });
 
