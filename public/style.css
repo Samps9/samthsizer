@@ -12,7 +12,7 @@
     background: -ms-linear-gradient(top, #708B75, #759AAB);
     background: -o-linear-gradient(top, #708B75, #759AAB);
     background-image: -ms-linear-gradient(top, #708B75 0%, #759AAB 100%);
-    background-repeat: no-repeat;
+/*    background-repeat: no-repeat;*/
     background-size: 100%;
     -webkit-touch-callout:none;
     -webkit-user-select:none;

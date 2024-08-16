@@ -7,69 +7,55 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
 
-  <script type="text/javascript" src="//connect.soundcloud.com/sdk.js"></script>
-  <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+  <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
 
   <script type="text/javascript">
 
     $(document).ready(function(){
+      // TODO: 
+      // 1. Soundcloud recorder was built on flash, but flash is retired so we need to use new logic to record the web audio context
+      // 2. The Soundcloud SDK and upload features may need updating
       SC.initialize({
         client_id: '<%= ENV["SAMTHSIZER_SC_CLIENT_ID"] %>',
         redirect_uri: 'https://samthsizer.herokuapp.com/callback.erb',
       })
 
-      $("#startRecording").click(function(e){
-        updateTimerRecord(0)
-        e.preventDefault();
-        SC.record({
-          progress: function(ms, avgPeak){
-            updateTimerRecord(ms)   
-          }
-        })
+
+      $("#startRecording").click(function(event){
+        event.preventDefault();
+        console.log("trying to start recording but no logic :/")
       })
       
-      $("#stopRecording").click(function(e){
-          e.preventDefault();
-          SC.recordStop();    
+      $("#stopRecording").click(function(event){
+          event.preventDefault();
+          console.log("trying to stop recording but no logic :/")
       })
     
-      $("#playBack").click(function(){
-        updateTimerPlayBack(0)
-        SC.recordPlay({
-          progress: function(ms){
-            updateTimerPlayBack(ms)    
-          }    
-        })
+      $("#playBack").click(function(event){
+        event.preventDefault();
+        console.log("trying playback but no logic :/")
       })
       
       $("#upload").click(function(){
-        SC.connect({
-          connected: function(){
-            var today = new Date();
-            SC.recordUpload({
-              track:{
-              title: "My new recording " + today.getMonth() + "/" + today.getDate() + "/" + today.getFullYear(),
-              sharing: "public"
-              }    
+        var today = new Date();
+        var upload = SC.upload({
+              file: SC.getWAV(),
+              title: "My new recording " + today.getMonth() + "/" + today.getDate() + "/" + today.getFullYear()    
             })
-            alert("You've uploaded your latest recording to your Soundcloud! Check your tracks in your profile.")     
-          } 
-
-        })   
+        upload.request.addEventListener("progress", function(event){
+          $('.status').text("Uploading: " + ((event.loaded / event.total) * 100) + "%")
+        })
+        upload.then(function(){
+          alert("You've uploaded your latest recording to your Soundcloud! Check your recording at " + upload.permalink_url);
+        })
+                
       })
 
-      function updateTimerRecord(ms) {
-        $('.status').text("Now Recording: " + SC.Helper.millisecondsToHMS(ms));
-      }
-
-      function updateTimerPlayBack(ms) {
-        $('.status').text("Playback: " + SC.Helper.millisecondsToHMS(ms));
-      }
 
     });
  
-    
   </script>
+
   <link href='https://fonts.googleapis.com/css?family=Iceland|Jockey+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="font-awesome-4.5.0/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="style.css">
@@ -204,8 +190,8 @@
     <div id="mute-help">
       <a class="button" id="help"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
       <a class="button" id="tonematrix-mute">&#128266;</a>
-      
     </div>
+    
     <div id="modal-outer">
       <div id="modal-inner">
         <div id="modal-text">
@@ -245,7 +231,8 @@
       </div>
     </div>
 
-    <div id="soundcloud">
+    <%# this section needs refactoring, commenting out for now %>
+    <%# <div id="soundcloud">
 
       <a id="powered-by-sc" href="http://www.soundcloud.com">Powered By SoundCloud  <i class="fa fa-soundcloud fa-2x" aria-hidden="true"></i></a>
       
@@ -257,7 +244,7 @@
       </div>
 
       <p class="status"></p>
-    </div>
+    </div> %>
   
 </body>
     

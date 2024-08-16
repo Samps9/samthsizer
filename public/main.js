@@ -563,7 +563,7 @@
       if( mySamthsizerDT.getAttributeForAnchor(11) ){
         $("a")[11].setAttribute("class", "button")
         $("#tonematrix-mute").html("&#128266;")
-        tm.Synth.master.gain.value = 0.7;
+        tm.Synth.master.gain.value = 0.5;
       } else {
         $("a")[11].setAttribute("class", "button clicked")
         $("#tonematrix-mute").html("&#128263;")
