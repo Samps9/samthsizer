@@ -17,4 +17,4 @@
 <p>Live demo here: https://samthsizer.herokuapp.com/<p>
 <p>Have Fun -- Be Creative!</p>
 <h1>Git things:</h1>
-<p>`main` is the primary branch now, not master</p>
+<p><code>main</code> is the primary branch now, not master</p>
