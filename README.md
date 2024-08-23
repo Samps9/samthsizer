@@ -14,7 +14,7 @@
   <li>You can change the beats per mintue (BPM) to change the rate at which the Tonematrix cycles</li>
   <li>You can mute the Tonematrix with the mute button</li>
 </ul>
-<p>Live demo here: https://samthsizer.herokuapp.com/<p>
+<p>Live demo here: https://samps9.github.io/samthsizer/<p>
 <p>Have Fun -- Be Creative!</p>
 <h1>Git things:</h1>
 <p><code>main</code> is the primary branch now, not master</p>
