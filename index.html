@@ -3,67 +3,16 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" charset="UTF-8">
   <title>Samthsizer - Theremin style web synth</title>
-  <link rel="shortcut icon" href="/images/favicon (2).ico" type="image/x-icon">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
-
-  <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
-
-  <script type="text/javascript">
-
-    $(document).ready(function(){
-      // TODO: 
-      // 1. Soundcloud recorder was built on flash, but flash is retired so we need to use new logic to record the web audio context
-      // 2. The Soundcloud SDK and upload features may need updating
-      SC.initialize({
-        client_id: '<%= ENV["SAMTHSIZER_SC_CLIENT_ID"] %>',
-        redirect_uri: 'https://samthsizer.herokuapp.com/callback.erb',
-      })
-
-
-      $("#startRecording").click(function(event){
-        event.preventDefault();
-        console.log("trying to start recording but no logic :/")
-      })
-      
-      $("#stopRecording").click(function(event){
-          event.preventDefault();
-          console.log("trying to stop recording but no logic :/")
-      })
-    
-      $("#playBack").click(function(event){
-        event.preventDefault();
-        console.log("trying playback but no logic :/")
-      })
-      
-      $("#upload").click(function(){
-        var today = new Date();
-        var upload = SC.upload({
-              file: SC.getWAV(),
-              title: "My new recording " + today.getMonth() + "/" + today.getDate() + "/" + today.getFullYear()    
-            })
-        upload.request.addEventListener("progress", function(event){
-          $('.status').text("Uploading: " + ((event.loaded / event.total) * 100) + "%")
-        })
-        upload.then(function(){
-          alert("You've uploaded your latest recording to your Soundcloud! Check your recording at " + upload.permalink_url);
-        })
-                
-      })
-
-
-    });
- 
-  </script>
-
   <link href='https://fonts.googleapis.com/css?family=Iceland|Jockey+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="font-awesome-4.5.0/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body oncontextmenu="return false" >
+<body>
 
   <div id="wrapper">
-
 
     <div id="details" class="details-right-hand">
 
@@ -184,9 +133,6 @@
       <a id="submit" class="button">Enter</a>
     </div>
 
-    <a class="button right"  id="swap">Hand-Swap</a>
-
-
     <div id="mute-help">
       <a class="button" id="help"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
       <a class="button" id="tonematrix-mute">&#128266;</a>
@@ -201,7 +147,7 @@
             <ul>
               <li>The Samthsizer is like a theremin!</li>
               <li>Click and drag on the Samthsizer to make sounds</li>
-              <li>You can change how the Samthsizer sounds with the wave-form and effects buttons</li>
+              <li>You can change how the Samthsizer sounds with the waveform and effects buttons</li>
             </ul>
           </div>
 
@@ -215,39 +161,11 @@
             </ul>
           </div> 
 
-          <div class="modal-info">
-            <h3>Share your Sounds with Soundcloud:</h3>
-            <ul>
-              <li>Record and Upload the sounds you make here powered by Soundcloud API!</li>
-              <li>Hit record to record your sounds, stop to end your recording, play it back for QC, and upload it to your Soundcloud profile</li>
-              <li>Use your best speakers for highest fidelity recordings</li>
-
-            </ul>
-          </div>
-
           <h1 id="havefun">Have Fun -- Be Creative!</h1>
         </div>
         
       </div>
     </div>
-
-    <%# this section needs refactoring, commenting out for now %>
-    <%# <div id="soundcloud">
-
-      <a id="powered-by-sc" href="http://www.soundcloud.com">Powered By SoundCloud  <i class="fa fa-soundcloud fa-2x" aria-hidden="true"></i></a>
-      
-      <div id="sc-buttons">
-        <a id="startRecording" class="button">REC.</a>
-        <a id="stopRecording"class="button"><i class="fa fa-stop" aria-hidden="true"></i></a>
-        <a id="playBack" class="button"><i class="fa fa-play" aria-hidden="true"></i></a>
-        <a id="upload" class="button">Upload</a>
-      </div>
-
-      <p class="status"></p>
-    </div> %>
-  
-</body>
-    
     <script src="tonematrix_js/tonematrix.js"></script>
     <script src="tonematrix_js/core.js"></script>
     <script src="tonematrix_js/synth.js"></script>
@@ -255,4 +173,17 @@
     <script src="tonematrix_js/app.js"></script>
     <script type="text/javascript" src="tuna.js"></script>
     <script type="text/javascript" src="main.js"></script>
+  </div>
+  
+  <center id="no-mobile">
+    <div>
+      <p>The Samthsizer is not suitable for devices with screen widths 1200px or less.</p>
+      <p>Sorry :(</p>
+      <p>Please come back on a full size laptop or desktop computer to enjoy the full Samthsizer experience.</p>
+    </div>
+  </center>
+  
+</body>
+    
+    
 </html>
